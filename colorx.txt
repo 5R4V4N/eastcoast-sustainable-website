@@ -1,0 +1,10 @@
+
+
+
+
+Sun rays (outer)	Deep orange	#F7941D
+Sun core	Golden yellow	#FDB813
+Wave (light)	Cyan / sky blue	#29ABE2
+Wave (deep)	Ocean blue	#0066B3
+"East Coast" text	Dark navy	#1B3A7A
+Leaf on the 'a'	Fresh green	#39B54A
