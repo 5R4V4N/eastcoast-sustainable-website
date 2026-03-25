@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>East Coast Sustainable</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="EASTCOAST WEBSITE\public\favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mid: '#f8f9fa',
+                        orange: '#F7941D',
+                        yellow: '#FDB813',
+                        cyan: '#29ABE2',
+                        ocean: '#0066B3',
+                        navy: '#1B3A7A',
+                        green: '#39B54A',
+                        jade: '#39B54A',
+                        gold: '#FDB813',
+                        muted: '#5f6368',
+                        border: '#e8eaed',
+                        deep: '#1B3A7A',
+                    },
+                    fontFamily: {
+                        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        body: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="font-body text-[#5f6368] antialiased overflow-x-hidden"
+    style="font-family:'Plus Jakarta Sans',sans-serif;background:#fff;">
+
+    <div class="content-layer">
+        <div class="hidden md:block border-b" style="border-color:#e8eaed;background:#fff;">
+            <div class="container mx-auto px-6 max-w-7xl flex justify-between items-center py-2"
+                style="font-size:13px;color:#5f6368;">
+                <div class="flex gap-6">
+                    <a href="tel:+919705300059" style="color:#5f6368;text-decoration:none;"
+                        onmouseover="this.style.color='#0066B3'" onmouseout="this.style.color='#5f6368'"><i
+                            class="fa-solid fa-phone mr-1" style="color:#0066B3;"></i> +91 9705300059</a>
+                    <a href="mailto:business@eastcoast.net.in" style="color:#5f6368;text-decoration:none;"
+                        onmouseover="this.style.color='#0066B3'" onmouseout="this.style.color='#5f6368'"><i
+                            class="fa-solid fa-envelope mr-1" style="color:#0066B3;"></i> business@eastcoast.net.in</a>
+                </div>
+                <div class="flex gap-4">
+                    <a href="https://www.linkedin.com/in/east-coast-sustainable-private-ltd-632a38178/"
+                        style="color:#5f6368;text-decoration:none;" onmouseover="this.style.color='#0077B6'"
+                        onmouseout="this.style.color='#5f6368'"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.x.com/" style="color:#5f6368;text-decoration:none;"
+                        onmouseover="this.style.color='#0077B6'" onmouseout="this.style.color='#5f6368'"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/" style="color:#5f6368;text-decoration:none;"
+                        onmouseover="this.style.color='#0077B6'" onmouseout="this.style.color='#5f6368'"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav id="navbar" class="fixed w-full top-0 md:top-[37px] left-0 z-50" style="background:#fff;">
+            <div class="container mx-auto px-6 max-w-7xl py-3 flex justify-between items-center"
+                style="border-bottom:1px solid #e8eaed;">
+                <a href="#" class="flex items-center">
+                    <img src="logotext.png" alt="East Coast Sustainable"
+                        style="height:64px;width:auto;object-fit:contain;">
+                </a>
+                <ul class="hidden md:flex items-center space-x-7" style="font-size:14px;font-weight:500;color:#202124;">
+                    <li><a href="#" style="text-decoration:none;color:#202124;" onmouseover="this.style.color='#0077B6'"
+                            onmouseout="this.style.color='#202124'">Home</a></li>
+                    <li><a href="#about" style="text-decoration:none;color:#202124;"
+                            onmouseover="this.style.color='#0077B6'" onmouseout="this.style.color='#202124'">About</a>
+                    </li>
+                    <li><a href="#services" style="text-decoration:none;color:#202124;"
+                            onmouseover="this.style.color='#0077B6'"
+                            onmouseout="this.style.color='#202124'">Services</a>
+                    </li>
+                    <li><a href="#why-us" style="text-decoration:none;color:#202124;"
+                            onmouseover="this.style.color='#0077B6'" onmouseout="this.style.color='#202124'">Why Us</a>
+                    </li>
+                    <li><a href="#clients" style="text-decoration:none;color:#202124;"
+                            onmouseover="this.style.color='#0077B6'" onmouseout="this.style.color='#202124'">Clients</a>
+                    </li>
+                    <li><a href="accreditations.html" style="text-decoration:none;color:#202124;"
+                            onmouseover="this.style.color='#0077B6'"
+                            onmouseout="this.style.color='#202124'">Accreditations</a>
+                    </li>
+                    <li><a href="resources.html" style="text-decoration:none;color:#202124;"
+                            onmouseover="this.style.color='#0077B6'" onmouseout="this.style.color='#202124'">Resources</a>
+                    </li>
+                    <li><a href="#contact" style="text-decoration:none;color:#202124;"
+                            onmouseover="this.style.color='#0077B6'" onmouseout="this.style.color='#202124'">Contact</a>
+                    </li>
+                </ul>
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="#contact"
+                        style="background:#0066B3;color:#fff;padding:9px 22px;border-radius:6px;font-size:14px;font-weight:600;text-decoration:none;transition:background .2s;"
+                        onmouseover="this.style.background='#004f8c'" onmouseout="this.style.background='#0066B3'">Get a
+                        Consultation</a>
+                    <button id="nav-login-btn" onclick="triggerGoogleLogin()"
+                        class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all"
+                        style="background:#fff;border:1.5px solid #e8eaed;color:#1d235c;cursor:pointer;"
+                        onmouseover="this.style.borderColor='#0066B3';this.style.color='#0066B3'"
+                        onmouseout="this.style.borderColor='#e8eaed';this.style.color='#1d235c'">
+                        <i class="fa-brands fa-google text-[14px]"></i> Sign In
+                    </button>
+                    <div id="nav-user-menu" class="relative" style="display:none;">
+                        <button id="nav-user-btn" onclick="toggleUserDropdown()"
+                            class="flex items-center gap-2 px-2 py-1 rounded-full transition-all"
+                            style="background:#f8f9fa;border:1.5px solid #e8eaed;cursor:pointer;">
+                            <img id="nav-user-avatar" src="" alt="" class="w-7 h-7 rounded-full object-cover">
+                            <span id="nav-user-name"
+                                class="text-sm font-medium text-[#1d235c] max-w-[100px] truncate"></span>
+                            <i class="fa-solid fa-chevron-down text-[10px] text-muted mr-1"></i>
+                        </button>
+                        <div id="user-dropdown"
+                            class="absolute right-0 top-full mt-2 w-56 bg-white rounded-xl shadow-2xl border border-[#e8eaed] py-2 z-50"
+                            style="display:none;">
+                            <div class="px-4 py-2 border-b border-[#e8eaed]">
+                                <p id="dropdown-email" class="text-xs text-muted truncate"></p>
+                            </div>
+                            <button onclick="handleLogout()"
+                                class="w-full text-left px-4 py-2.5 text-sm text-[#ea4335] hover:bg-[#fce8e6] transition-colors flex items-center gap-2"
+                                style="border:none;background:none;cursor:pointer;">
+                                <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <button id="hamburger" class="md:hidden text-2xl focus:outline-none"
+                    style="color:#1d235c;background:none;border:none;cursor:pointer;">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="fixed inset-0 z-[60] opacity-0 invisible flex flex-col items-center justify-center"
+            style="background:#fff;pointer-events:none;">
+            <button id="close-menu" class="absolute top-6 right-6 text-3xl focus:outline-none"
+                style="color:#1d235c;background:none;border:none;cursor:pointer;">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <ul class="flex flex-col space-y-6 text-center" style="font-size:26px;font-weight:700;">
+                <li><a href="#" class="mobile-link block" style="color:#202124;text-decoration:none;"
+                        onmouseover="this.style.color='#F7941D'" onmouseout="this.style.color='#202124'">Home</a></li>
+                <li><a href="#about" class="mobile-link block" style="color:#202124;text-decoration:none;"
+                        onmouseover="this.style.color='#F7941D'" onmouseout="this.style.color='#202124'">About</a></li>
+                <li><a href="#services" class="mobile-link block" style="color:#202124;text-decoration:none;"
+                        onmouseover="this.style.color='#F7941D'" onmouseout="this.style.color='#202124'">Services</a>
+                </li>
+                <li><a href="#why-us" class="mobile-link block" style="color:#202124;text-decoration:none;"
+                        onmouseover="this.style.color='#F7941D'" onmouseout="this.style.color='#202124'">Why Us</a></li>
+                <li><a href="#clients" class="mobile-link block" style="color:#202124;text-decoration:none;"
+                        onmouseover="this.style.color='#F7941D'" onmouseout="this.style.color='#202124'">Clients</a>
+                </li>
+                <li><a href="accreditations.html" class="mobile-link block" style="color:#202124;text-decoration:none;"
+                        onmouseover="this.style.color='#F7941D'"
+                        onmouseout="this.style.color='#202124'">Accreditations</a>
+                </li>
+                <li><a href="resources.html" class="mobile-link block" style="color:#202124;text-decoration:none;"
+                        onmouseover="this.style.color='#F7941D'" onmouseout="this.style.color='#202124'">Resources</a>
+                </li>
+                <li><a href="#contact" class="mobile-link block" style="color:#202124;text-decoration:none;"
+                        onmouseover="this.style.color='#F7941D'" onmouseout="this.style.color='#202124'">Contact</a>
+                </li>
+            </ul>
+            <div class="mt-10 flex flex-col items-center gap-4">
+                <button id="mobile-login-btn"
+                    onclick="triggerGoogleLogin(); document.getElementById('mobile-menu').classList.remove('open'); document.getElementById('mobile-menu').style.pointerEvents='none';"
+                    class="flex items-center gap-3 px-8 py-3 rounded-lg text-base font-semibold transition-all"
+                    style="background:#fff;border:2px solid #e8eaed;color:#1d235c;cursor:pointer;">
+                    <i class="fa-brands fa-google"></i> Sign In with Google
+                </button>
+                <div id="mobile-user-info" style="display:none;" class="flex flex-col items-center gap-3">
+                    <img id="mobile-user-avatar" src="" alt=""
+                        class="w-14 h-14 rounded-full object-cover border-2 border-[#e8eaed]">
+                    <span id="mobile-user-name" class="text-lg font-semibold text-[#1d235c]"></span>
+                    <button
+                        onclick="handleLogout(); document.getElementById('mobile-menu').classList.remove('open'); document.getElementById('mobile-menu').style.pointerEvents='none';"
+                        class="flex items-center gap-2 px-6 py-2 rounded-lg text-sm font-semibold transition-all"
+                        style="background:none;border:1.5px solid #ea4335;color:#ea4335;cursor:pointer;">
+                        <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+                    </button>
+                </div>
+            </div>
+        </div>
+        <section class="min-h-screen flex flex-col justify-center relative pt-24 pb-16 px-6"
+            style="background:transparent;z-index:0;">
+            <div class="container mx-auto max-w-5xl text-center space-y-8 fade-in">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-jade/40 bg-jade/5 text-[11px] font-medium tracking-wide text-[#1d235c] mx-auto shadow-[0_0_15px_rgba(0,184,148,0.15)] uppercase">
+                    <i class="fa-solid fa-building-columns text-jade"></i>
+                    ACCREDITED ENERGY CONSULTANCY FIRM
+                </div>
+                <h1 class="font-heading text-4xl md:text-7xl font-bold leading-tight text-[#1d235c]">
+                    Driving <span id="type-word-1" style="color:#FDB813;"></span><span id="cursor-1"
+                        style="color:#FDB813;border-right:3px solid #FDB813;animation:blink .7s step-end infinite;">
+                    </span>, <br>
+                    Enabling <span style="color:#39B54A;">Sustainability.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-muted max-w-3xl mx-auto leading-relaxed">
+                    Global-standard energy auditing, monitoring & sustainability consulting — trusted by industries,
+                    governments & institutions across India.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                    <a href="#services"
+                        class="px-8 py-3.5 rounded-full text-[15px] font-bold tracking-wide w-full sm:w-auto text-white"
+                        style="background:#0066B3;" onmouseover="this.style.background='#004f8c'"
+                        onmouseout="this.style.background='#0066B3'">
+                        Explore Our Services
+                    </a>
+                    <a href="#why-us"
+                        class="btn-glass text-[#1d235c] px-8 py-3.5 rounded-full text-[15px] font-medium tracking-wide w-full sm:w-auto">
+                        Why Choose Us
+                    </a>
+                </div>
+                <div
+                    class="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-12 mt-8 border-t border-black/10 w-full max-w-4xl mx-auto relative relative">
+                    <div
+                        class="text-center relative lg:after:absolute lg:after:right-0 lg:after:top-1/2 lg:after:-translate-y-1/2 lg:after:h-10 lg:after:w-px lg:after:bg-black/5">
+                        <div class="font-heading text-4xl md:text-5xl font-bold stat-num" style="color:#1B3A7A;"
+                            data-target="700">0
+                        </div>
+                        <div class="text-sm text-muted mt-1">Projects Completed</div>
+                    </div>
+                    <div
+                        class="text-center relative lg:after:absolute lg:after:right-0 lg:after:top-1/2 lg:after:-translate-y-1/2 lg:after:h-10 lg:after:w-px lg:after:bg-black/5">
+                        <div class="font-heading text-4xl md:text-5xl font-bold" style="color:#FDB813;">
+                            30+
+                        </div>
+                        <div class="text-sm text-muted mt-1">Years Experience</div>
+                    </div>
+                    <div
+                        class="text-center relative lg:after:absolute lg:after:right-0 lg:after:top-1/2 lg:after:-translate-y-1/2 lg:after:h-10 lg:after:w-px lg:after:bg-black/5">
+                        <div class="font-heading text-4xl md:text-5xl font-bold" style="color:#1B3A7A;"><span
+                                class="stat-num" data-target="100">0</span>%</div>
+                        <div class="text-sm text-muted mt-1">Client Commitment</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-heading text-4xl md:text-5xl font-bold stat-num" style="color:#FDB813;"
+                            data-target="50">0
+                        </div>
+                        <div class="text-sm text-muted mt-1">Sector Coverage</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted/50 animate-bounce-scroll text-2xl">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </section>
+        <section id="about" class="py-24 px-6" style="background:#f8f9fa;">
+            <div class="container mx-auto max-w-7xl">
+                <div class="flex flex-col md:flex-row gap-16 items-center">
+                    <div class="w-full md:w-1/2 space-y-6 fade-in">
+                        <span class="flex items-center gap-2"
+                            style="font-size:12px;font-weight:700;letter-spacing:.18em;color:#1B3A7A;text-transform:uppercase;">
+                            <span style="width:28px;height:2px;background:#1B3A7A;border-radius:1px;"></span> WHO WE ARE
+                        </span>
+                        <h2
+                            style="font-size:clamp(2rem,4vw,3rem);font-weight:800;line-height:1.15;color:#202124;letter-spacing:-.01em;">
+                            Pioneering Energy Excellence Since Day One
+                        </h2>
+                        <p class="text-muted text-[16px] leading-relaxed">
+                            East Coast Sustainable was founded by experienced professionals with an impressive
+                            pedigree in energy efficiency, renewable energy, environment conservation & climate change.
+                            East Coast Sustainable is an Empanelled Accredited Energy Auditing Firm (EmAEA) by Bureau of
+                            Energy
+                            Efficiency, India for conducting Monitoring & Verification Audits and Check Verification
+                            Audits under the PAT scheme. Our team holds eminent certifications including Certified
+                            Energy Auditor, Accredited Energy Auditor, Lead Auditor (ISO 9001 & ISO 50001) & Chartered
+                            Engineer.
+                        </p>
+                        <ul class="space-y-4 pt-2">
+                            <li class="flex items-start gap-4">
+                                <i class="fa-solid fa-circle-check text-xl mt-0.5" style="color:#39B54A;"></i>
+                                <span class="text-[15px] font-medium text-[#1d235c]/90">Empanelled Accredited Energy
+                                    Auditing Firm (EmAEA) by BEE, India</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <i class="fa-solid fa-circle-check text-xl mt-0.5" style="color:#39B54A;"></i>
+                                <span class="text-[15px] font-medium text-[#1d235c]/90">700+ Projects across industries,
+                                    government &amp; institutions</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <i class="fa-solid fa-circle-check text-xl mt-0.5" style="color:#39B54A;"></i>
+                                <span class="text-[15px] font-medium text-[#1d235c]/90">Certified Energy Auditors | Lead
+                                    Auditors ISO 9001 &amp; ISO 50001</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <i class="fa-solid fa-circle-check text-xl mt-0.5" style="color:#39B54A;"></i>
+                                <span class="text-[15px] font-medium text-[#1d235c]/90">Multisector reach: industry,
+                                    government, NGOs, financial institutions</span>
+                            </li>
+                        </ul>
+                        <div class="pt-4">
+                            <a href="#why-us"
+                                class="btn-glass text-[#1d235c] px-7 py-3 rounded-full text-[15px] font-medium inline-block">
+                                Learn More About Us
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 relative h-[450px] fade-in" style="transition-delay: 0.2s;">
+                        <div
+                            class="glass-card absolute top-0 right-0 w-[80%] p-8 border-t-2 border-t-jade backdrop-blur-[30px] z-30 shadow-2xl">
+                            <div class="font-heading text-6xl font-bold mb-2" style="color:#1B3A7A;">700+</div>
+                            <div class="text-xl text-muted font-heading italic">Projects Delivered</div>
+                        </div>
+                        <div
+                            class="glass-card absolute top-[140px] left-0 w-[85%] p-8 border-t-2 border-t-gold backdrop-blur-[20px] z-20 shadow-2xl">
+                            <i class="fa-solid fa-certificate text-5xl mb-4 opacity-80" style="color:#39B54A;"></i>
+                            <div class="text-2xl font-heading text-[#1d235c] font-bold mb-2">EmAEA Badge</div>
+                            <div class="text-muted text-sm leading-relaxed">Bureau of Energy Efficiency Empanelled</div>
+                        </div>
+                        <div
+                            class="glass-card absolute bottom-0 right-[10%] w-[90%] p-6 backdrop-blur-[10px] z-10 shadow-2xl flex justify-between items-center text-center">
+                            <div>
+                                <div class="font-bold text-lg" style="color:#FDB813;">CEA</div>
+                            </div>
+                            <div class="w-px h-8 bg-black/5"></div>
+                            <div>
+                                <div class="font-bold text-lg" style="color:#F7941D;">AEA</div>
+                            </div>
+                            <div class="w-px h-8 bg-black/5"></div>
+                            <div>
+                                <div class="font-bold text-lg" style="color:#FDB813;">ISO 9001</div>
+                            </div>
+                            <div class="w-px h-8 bg-black/5"></div>
+                            <div>
+                                <div class="font-bold text-lg" style="color:#F7941D;">ISO 50001</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="services" class="py-24 px-6 relative">
+            <div class="container mx-auto max-w-7xl">
+                <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
+                    <span
+                        class="text-[12px] font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-3 mb-4"
+                        style="color:#1B3A7A;">
+                        <span class="w-8 h-px" style="background:#1B3A7A;"></span> OUR EXPERTISE <span class="w-8 h-px"
+                            style="background:#1B3A7A;"></span>
+                    </span>
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6">Comprehensive Energy
+                        &<br>Sustainability Solutions</h2>
+                    <p class="text-muted text-lg">
+                        End-to-end consulting for industries navigating energy transition and environmental compliance
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="glass-card p-8 group fade-in hover:-translate-y-2 hover:border-t-yellow border-t-transparent border-t-2 relative overflow-hidden cursor-pointer"
+                        onclick="openModal('Energy Efficiency','#FDB813','fa-bolt',`East Coast conducts detailed energy audits, M&amp;V audits, and Investment Grade Energy Audits for industrial, agricultural, municipal, and commercial sectors. Services include energy benchmarking, feasibility studies, project reports, and technical assistance for ESCO projects. The team also delivers training programs for stakeholders and cleaner production solutions to help clients optimize energy use and reduce operational costs.`)">
+                        <i class="fa-solid fa-bolt text-3xl text-yellow mb-6"></i>
+                        <h3 class="font-heading text-2xl font-bold mb-3 text-[#1B3A7A]">Energy Efficiency</h3>
+                        <p class="text-muted text-sm leading-relaxed">Detailed energy audits, M&amp;V audits, and
+                            performance benchmarking across all industrial and commercial sectors.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-yellow text-sm font-medium">Learn more <i
+                                class="fa-solid fa-arrow-right text-xs"></i></span>
+                    </div>
+                    <div class="glass-card p-8 group fade-in hover:-translate-y-2 hover:border-t-cyan border-t-transparent border-t-2 relative overflow-hidden cursor-pointer"
+                        style="transition-delay: 0.1s;"
+                        onclick="openModal('Water Audits','#29ABE2','fa-droplet',`East Coast conducts comprehensive water audits covering consumption analysis, water balance studies, leak detection, and distribution efficiency assessments for industrial and commercial facilities. The team identifies wastage points, recommends conservation measures, and assists in implementing water recycling and reuse systems to reduce freshwater consumption and operational expenditure significantly.`)">
+                        <i class="fa-solid fa-droplet text-3xl text-cyan mb-6"></i>
+                        <h3 class="font-heading text-2xl font-bold mb-3 text-[#1B3A7A]">Water Audits</h3>
+                        <p class="text-muted text-sm leading-relaxed">Comprehensive water consumption analysis, loss
+                            detection, and strategic conservation planning.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-cyan text-sm font-medium">Learn more <i
+                                class="fa-solid fa-arrow-right text-xs"></i></span>
+                    </div>
+                    <div class="glass-card p-8 group fade-in hover:-translate-y-2 hover:border-t-green border-t-transparent border-t-2 relative overflow-hidden cursor-pointer"
+                        style="transition-delay: 0.2s;"
+                        onclick="openModal('Carbon Footprint &amp; Net Zero','#39B54A','fa-globe',`East Coast offers end-to-end carbon management services including GHG inventory preparation, carbon footprint assessments, and emission reduction roadmaps aligned with global decarbonization standards. The team assists organizations in developing science-based net-zero targets, identifying abatement opportunities, and implementing strategies to achieve carbon neutrality across Scope 1, 2, and 3 emissions.`)">
+                        <i class="fa-solid fa-globe text-3xl text-green mb-6"></i>
+                        <h3 class="font-heading text-2xl font-bold mb-3 text-[#1B3A7A]">Carbon Footprint &amp; Net Zero
+                        </h3>
+                        <p class="text-muted text-sm leading-relaxed">Carbon accounting, emission inventories, and
+                            net-zero transition roadmaps aligned with global standards.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-green text-sm font-medium">Learn more <i
+                                class="fa-solid fa-arrow-right text-xs"></i></span>
+                    </div>
+                    <div class="glass-card p-8 group fade-in hover:-translate-y-2 hover:border-t-green border-t-transparent border-t-2 relative overflow-hidden cursor-pointer"
+                        style="transition-delay: 0.3s;"
+                        onclick="openModal('Sustainability Consulting','#39B54A','fa-leaf',`East Coast undertakes Sustainability Reporting per GRI standards and BRSR/ESG frameworks, enabling organizations to communicate their economic, environmental, and social impact. The team also develops ISO 9001, ISO 14001, ISO 45001, and ISO 50001 management systems, conducts internal auditor training, and guides organizations through ZED Certification and GreenCo Rating processes.`)">
+                        <i class="fa-solid fa-leaf text-3xl text-green mb-6"></i>
+                        <h3 class="font-heading text-2xl font-bold mb-3 text-[#1B3A7A]">Sustainability Consulting</h3>
+                        <p class="text-muted text-sm leading-relaxed">BRSR/ESG reporting, sustainability strategy
+                            development, and regulatory compliance advisory.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-green text-sm font-medium">Learn more <i
+                                class="fa-solid fa-arrow-right text-xs"></i></span>
+                    </div>
+                    <div class="glass-card p-8 group fade-in hover:-translate-y-2 hover:border-t-orange border-t-transparent border-t-2 relative overflow-hidden cursor-pointer"
+                        style="transition-delay: 0.4s;"
+                        onclick="openModal('PAT Audits','#F7941D','fa-chart-line',`East Coast is an Empanelled Accredited Energy Auditing Firm (EmAEA) by BEE, authorized to conduct Monitoring &amp; Verification and Check Verification audits under the PAT scheme across Cement, Iron &amp; Steel, Thermal Power, Refinery, and Distribution sectors. With 100+ designated consumers served, the team prepares verification reports with AEA opinion on energy saving certificate entitlement.`)">
+                        <i class="fa-solid fa-chart-line text-3xl text-orange mb-6"></i>
+                        <h3 class="font-heading text-2xl font-bold mb-3 text-[#1B3A7A]">PAT Audits</h3>
+                        <p class="text-muted text-sm leading-relaxed">Perform, Achieve &amp; Trade scheme mandatory
+                            energy audits as a BEE-empanelled accredited auditor.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-orange text-sm font-medium">Learn more <i
+                                class="fa-solid fa-arrow-right text-xs"></i></span>
+                    </div>
+                    <div class="glass-card p-8 group fade-in hover:-translate-y-2 hover:border-t-yellow border-t-transparent border-t-2 relative overflow-hidden cursor-pointer"
+                        style="transition-delay: 0.5s;"
+                        onclick="openModal('Renewable Energy &amp; Solar','#FDB813','fa-solar-panel',`East Coast delivers biomass resource assessments, solar PV feasibility studies, and detailed engineering for renewable energy projects. The team has managed bid processes for capacities up to 1,500 MW and helped commercial and industrial clients procure open-access solar energy at discounted tariffs, reducing energy costs with zero capital investment while meeting corporate sustainability and net-zero commitments.`)">
+                        <i class="fa-solid fa-solar-panel text-3xl text-yellow mb-6"></i>
+                        <h3 class="font-heading text-2xl font-bold mb-3 text-[#1B3A7A]">Renewable Energy &amp; Solar
+                        </h3>
+                        <p class="text-muted text-sm leading-relaxed">End-to-end solar energy consulting, feasibility
+                            studies, and renewable energy project support.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-yellow text-sm font-medium">Learn more <i
+                                class="fa-solid fa-arrow-right text-xs"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="service-modal"
+            class="fixed inset-0 z-[200] flex items-center justify-center p-4 opacity-0 pointer-events-none"
+            style="backdrop-filter:blur(0px);transition:opacity .3s ease,backdrop-filter .3s ease;">
+            <div id="modal-backdrop" class="absolute inset-0" style="background:rgba(27,58,122,.45);"
+                onclick="closeModal()"></div>
+            <div id="modal-card" class="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full p-8 z-10"
+                style="transform:scale(.88) translateY(24px);opacity:0;transition:transform .35s cubic-bezier(.34,1.56,.64,1),opacity .3s ease;">
+                <button onclick="closeModal()"
+                    class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full"
+                    style="background:#f1f3f4;border:none;cursor:pointer;font-size:16px;color:#5f6368;">✕</button>
+                <div class="flex items-center gap-4 mb-5">
+                    <div id="modal-icon-wrap"
+                        class="w-12 h-12 rounded-full flex items-center justify-center text-white text-xl"
+                        style="background:#1B3A7A;">
+                        <i id="modal-icon" class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 id="modal-title" class="font-heading text-2xl font-bold text-[#1B3A7A]"></h3>
+                </div>
+                <p id="modal-body" class="text-[15px] leading-relaxed" style="color:#5f6368;"></p>
+            </div>
+        </div>
+        <section id="why-us" class="py-24 bg-mid px-6 relative">
+            <div class="container mx-auto max-w-7xl relative z-10">
+                <div class="flex flex-col lg:flex-row gap-16">
+                    <div class="w-full lg:w-[40%] space-y-8 fade-in">
+                        <h2 class="font-heading text-4xl md:text-5xl font-bold leading-tight">
+                            Why the World's Leading Organizations Trust EAST-COAST
+                        </h2>
+                        <p class="text-muted text-lg leading-relaxed">
+                            Our methodology is rooted in precision, validated by global standards, and backed by a
+                            comprehensive understanding of sector-specific challenges. We don't just audit; we architect
+                            pathways to absolute efficiency.
+                        </p>
+                    </div>
+                    <div class="w-full lg:w-[60%] flex flex-col gap-4 fade-in">
+                        <div class="glass-card p-5 flex items-start gap-4">
+                            <i class="fa-solid fa-bolt text-xl mt-1 w-6" style="color:#FDB813;"></i>
+                            <div>
+                                <h4 class="text-lg font-bold text-[#1d235c] mb-1">BEE-Accredited &amp; Empanelled</h4>
+                                <p class="text-muted text-sm">Officially recognized by Bureau of Energy Efficiency,
+                                    India</p>
+                            </div>
+                        </div>
+                        <div class="glass-card p-5 flex items-start gap-4">
+                            <i class="fa-regular fa-clipboard text-xl mt-1 w-6" style="color:#29ABE2;"></i>
+                            <div>
+                                <h4 class="text-lg font-bold text-[#1d235c] mb-1">700+ Completed Projects</h4>
+                                <p class="text-muted text-sm">Proven track record across multiple economic sectors</p>
+                            </div>
+                        </div>
+                        <div class="glass-card p-5 flex items-start gap-4">
+                            <i class="fa-solid fa-graduation-cap text-xl mt-1 w-6" style="color:#39B54A;"></i>
+                            <div>
+                                <h4 class="text-lg font-bold text-[#1d235c] mb-1">Elite Certifications</h4>
+                                <p class="text-muted text-sm">CEA, AEA, Lead Auditor ISO 9001 &amp; ISO 50001, Chartered
+                                    Engineer</p>
+                            </div>
+                        </div>
+                        <div class="glass-card p-5 flex items-start gap-4">
+                            <i class="fa-solid fa-industry text-xl mt-1 w-6" style="color:#F7941D;"></i>
+                            <div>
+                                <h4 class="text-lg font-bold text-[#1d235c] mb-1">Cross-Sector Expertise</h4>
+                                <p class="text-muted text-sm">Industry, power utilities, cement, fertilizers, railways,
+                                    NGOs &amp; more</p>
+                            </div>
+                        </div>
+                        <div class="glass-card p-5 flex items-start gap-4">
+                            <i class="fa-solid fa-globe text-xl mt-1 w-6" style="color:#0066B3;"></i>
+                            <div>
+                                <h4 class="text-lg font-bold text-[#1d235c] mb-1">International Standards</h4>
+                                <p class="text-muted text-sm">Methodology aligned with global best practices and
+                                    compliance frameworks</p>
+                            </div>
+                        </div>
+                        <div class="glass-card p-5 flex items-start gap-4">
+                            <i class="fa-solid fa-handshake text-xl mt-1 w-6" style="color:#1B3A7A;"></i>
+                            <div>
+                                <h4 class="text-lg font-bold text-[#1d235c] mb-1">End-to-End Delivery</h4>
+                                <p class="text-muted text-sm">From audit to implementation, monitoring to verification
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="clients" class="py-24 px-6 overflow-hidden">
+            <div class="container mx-auto max-w-7xl">
+                <div class="text-center max-w-2xl mx-auto mb-16 fade-in">
+                    <span class="text-[12px] font-bold tracking-[0.2em] uppercase mb-4 block"
+                        style="color:#1B3A7A;">TRUSTED BY</span>
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold">Our Clients Span Every Major Sector</h2>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
+                    <div class="glass-card p-8 text-center fade-in">
+                        <i class="fa-solid fa-landmark text-4xl text-jade mb-6"></i>
+                        <h3 class="font-heading text-2xl font-bold mb-5 text-[#1d235c]">Public Sector &amp; Government
+                        </h3>
+                        <ul class="text-sm text-muted text-left space-y-2 leading-relaxed">
+                            <li><span class="font-semibold text-[#1B3A7A]">Municipalities &amp; Corporations:</span>
+                                Water pumping systems, street lighting, wastewater treatment, solid waste management
+                            </li>
+                            <li><span class="font-semibold text-[#1B3A7A]">Power Plants:</span> Thermal power (coal),
+                                gas-based (combined &amp; simple cycle), captive power plants</li>
+                            <li><span class="font-semibold text-[#1B3A7A]">Government Bodies:</span> Ministries of
+                                Electricity, Water, Renewable Energy; BEE, NREDCAP, MEDA, UREDA, NTPC, NEEPCO</li>
+                            <li><span class="font-semibold text-[#1B3A7A]">Inter-governmental:</span> UNEP, World Bank,
+                                IREDA, UNDP</li>
+                        </ul>
+                    </div>
+                    <div class="glass-card p-8 text-center fade-in" style="transition-delay: 0.1s;">
+                        <i class="fa-solid fa-industry text-4xl text-jade mb-6"></i>
+                        <h3 class="font-heading text-2xl font-bold mb-5 text-[#1d235c]">Industrial &amp; Corporate</h3>
+                        <ul class="text-sm text-muted text-left space-y-2 leading-relaxed">
+                            <li><span class="font-semibold text-[#1B3A7A]">Process Industries:</span> Aluminum,
+                                Refineries (IOCL, HPCL, MRPL), Chemicals &amp; Fertilizers, Pharmaceuticals</li>
+                            <li><span class="font-semibold text-[#1B3A7A]">Heavy Industry:</span> Iron &amp; Steel (JSW,
+                                SAIL, NALCO), Cement (UltraTech, Dalmia, Rain, Penna), Engineering</li>
+                            <li><span class="font-semibold text-[#1B3A7A]">Other Sectors:</span> Pulp &amp; Paper
+                                (Century, West Coast), Textiles (Trident, Kallam), Corporate Offices, Malls</li>
+                            <li><span class="font-semibold text-[#1B3A7A]">Buildings:</span> Hospitals, Commercial
+                                Complexes, Hotels (Novotel, Key Select)</li>
+                        </ul>
+                    </div>
+                    <div class="glass-card p-8 text-center fade-in" style="transition-delay: 0.2s;">
+                        <i class="fa-solid fa-university text-4xl text-jade mb-6"></i>
+                        <h3 class="font-heading text-2xl font-bold mb-5 text-[#1d235c]">Institutions &amp; Research</h3>
+                        <ul class="text-sm text-muted text-left space-y-2 leading-relaxed">
+                            <li><span class="font-semibold text-[#1B3A7A]">Education Institutes:</span> NISST, CIKIT, HP
+                                Skill Development Centre, National Productivity Council</li>
+                            <li><span class="font-semibold text-[#1B3A7A]">Research &amp; Advisory:</span> CPRI
+                                Bengaluru, IIIM Jammu, FICCI, PCRA, NPC, Bureau Veritas, BDO India, Deloitte</li>
+                            <li><span class="font-semibold text-[#1B3A7A]">Financial &amp; Development:</span> SIDBI,
+                                BACS Energy, Grant Thornton, Enzen Global</li>
+                            <li><span class="font-semibold text-[#1B3A7A]">Industry Bodies:</span> Laghu Udyog Bharati,
+                                BSCIC Certification, Sector Experts</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="logo-ticker-section fade-in" style="overflow:hidden;">
+                    <style>
+                        .logo-ticker-track {
+                            display: flex;
+                            align-items: center;
+                            width: max-content;
+                            animation: logoScroll 40s linear infinite;
+                        }
+
+                        .logo-ticker-track.reverse {
+                            animation: logoScrollReverse 45s linear infinite;
+                        }
+
+                        .logo-ticker-track:hover {
+                            animation-play-state: paused;
+                        }
+
+                        @keyframes logoScroll {
+                            from {
+                                transform: translateX(0);
+                            }
+
+                            to {
+                                transform: translateX(-50%);
+                            }
+                        }
+
+                        @keyframes logoScrollReverse {
+                            from {
+                                transform: translateX(-50%);
+                            }
+
+                            to {
+                                transform: translateX(0);
+                            }
+                        }
+
+                        .logo-tile {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background: rgba(255, 255, 255, 0.8);
+                            border: 1px solid rgba(27, 58, 122, 0.08);
+                            border-radius: 12px;
+                            padding: 14px 24px;
+                            margin: 0 10px;
+                            height: 72px;
+                            min-width: 140px;
+                            box-shadow: 0 2px 12px rgba(27, 58, 122, 0.05);
+                            transition: box-shadow 0.2s, transform 0.2s;
+                            flex-shrink: 0;
+                        }
+
+                        .logo-tile:hover {
+                            box-shadow: 0 6px 24px rgba(27, 58, 122, 0.13);
+                            transform: translateY(-2px);
+                        }
+
+                        .logo-tile img {
+                            max-height: 44px;
+                            max-width: 120px;
+                            width: auto;
+                            object-fit: contain;
+                            filter: grayscale(30%);
+                            transition: filter 0.2s;
+                        }
+
+                        .logo-tile:hover img {
+                            filter: grayscale(0%);
+                        }
+
+                        .logo-ticker-row {
+                            overflow: hidden;
+                            margin-bottom: 16px;
+                            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+                            mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+                        }
+                    </style>
+                    <div class="logo-ticker-row">
+                        <div class="logo-ticker-track">
+                            <div class="logo-tile"><img src="@ Logos/NTPC Logo.png" alt="NTPC"></div>
+                            <div class="logo-tile"><img src="@ Logos/HPCL.png" alt="HPCL"></div>
+                            <div class="logo-tile"><img src="@ Logos/BPCL Logo.jpg" alt="BPCL"></div>
+                            <div class="logo-tile"><img src="@ Logos/MRPL.jpg" alt="MRPL"></div>
+                            <div class="logo-tile"><img src="@ Logos/Ultratech_Cement_Logo.svg.png"
+                                    alt="UltraTech Cement"></div>
+                            <div class="logo-tile"><img src="@ Logos/Dalmia Cement Plant.png" alt="Dalmia Cement"></div>
+                            <div class="logo-tile"><img src="@ Logos/Rain Cements Limited.png" alt="Rain Cements"></div>
+                            <div class="logo-tile"><img src="@ Logos/Penna Cement Logo.png" alt="Penna Cement"></div>
+                            <div class="logo-tile"><img src="@ Logos/SAIL_Logo.png" alt="SAIL"></div>
+                            <div class="logo-tile"><img src="@ Logos/NALCO.png" alt="NALCO"></div>
+                            <div class="logo-tile"><img src="@ Logos/Vedanta-Logo-PNG.png" alt="Vedanta"></div>
+                            <div class="logo-tile"><img src="@ Logos/Nayara Energy.jpg" alt="Nayara Energy"></div>
+                            <div class="logo-tile"><img src="@ Logos/BEE Govt.jpg" alt="BEE"></div>
+                            <div class="logo-tile"><img src="@ Logos/Numaligarh Refinery Logo.png"
+                                    alt="Numaligarh Refinery"></div>
+                            <div class="logo-tile"><img src="@ Logos/NTPC Logo.png" alt="NTPC"></div>
+                            <div class="logo-tile"><img src="@ Logos/HPCL.png" alt="HPCL"></div>
+                            <div class="logo-tile"><img src="@ Logos/BPCL Logo.jpg" alt="BPCL"></div>
+                            <div class="logo-tile"><img src="@ Logos/MRPL.jpg" alt="MRPL"></div>
+                            <div class="logo-tile"><img src="@ Logos/Ultratech_Cement_Logo.svg.png"
+                                    alt="UltraTech Cement"></div>
+                            <div class="logo-tile"><img src="@ Logos/Dalmia Cement Plant.png" alt="Dalmia Cement"></div>
+                            <div class="logo-tile"><img src="@ Logos/Rain Cements Limited.png" alt="Rain Cements"></div>
+                            <div class="logo-tile"><img src="@ Logos/Penna Cement Logo.png" alt="Penna Cement"></div>
+                            <div class="logo-tile"><img src="@ Logos/SAIL_Logo.png" alt="SAIL"></div>
+                            <div class="logo-tile"><img src="@ Logos/NALCO.png" alt="NALCO"></div>
+                            <div class="logo-tile"><img src="@ Logos/Vedanta-Logo-PNG.png" alt="Vedanta"></div>
+                            <div class="logo-tile"><img src="@ Logos/Nayara Energy.jpg" alt="Nayara Energy"></div>
+                            <div class="logo-tile"><img src="@ Logos/BEE Govt.jpg" alt="BEE"></div>
+                            <div class="logo-tile"><img src="@ Logos/Numaligarh Refinery Logo.png"
+                                    alt="Numaligarh Refinery"></div>
+                        </div>
+                    </div>
+                    <div class="logo-ticker-row">
+                        <div class="logo-ticker-track reverse">
+                            <div class="logo-tile"><img src="@ Logos/Ramco Logo.png" alt="Ramco"></div>
+                            <div class="logo-tile"><img src="@ Logos/Birla Corporation Limited (BCL).jpg"
+                                    alt="Birla Corporation"></div>
+                            <div class="logo-tile"><img src="@ Logos/JK Lakshmi.png" alt="JK Lakshmi"></div>
+                            <div class="logo-tile"><img src="@ Logos/ACC_Limited_logo.svg.png" alt="ACC Limited"></div>
+                            <div class="logo-tile"><img src="@ Logos/Trident Group.png" alt="Trident"></div>
+                            <div class="logo-tile"><img src="@ Logos/Kallam Textiles.png" alt="Kallam Textiles"></div>
+                            <div class="logo-tile"><img src="@ Logos/Bureau Veritas.png" alt="Bureau Veritas"></div>
+                            <div class="logo-tile"><img src="@ Logos/SIDBI Logo.jpg" alt="SIDBI"></div>
+                            <div class="logo-tile"><img src="@ Logos/GMR.jpg" alt="GMR"></div>
+                            <div class="logo-tile"><img src="@ Logos/Jindal Power.png" alt="Jindal Power"></div>
+                            <div class="logo-tile"><img src="@ Logos/JSL.png" alt="JSL"></div>
+                            <div class="logo-tile"><img src="@ Logos/TATA Steel Logo.png" alt="TATA Steel"></div>
+                            <div class="logo-tile"><img src="@ Logos/West Coast Paper Mills Limited Logo.png"
+                                    alt="West Coast Paper"></div>
+                            <div class="logo-tile"><img src="@ Logos/Novotel Logo.jpg" alt="Novotel"></div>
+                            <div class="logo-tile"><img src="@ Logos/Ramco Logo.png" alt="Ramco"></div>
+                            <div class="logo-tile"><img src="@ Logos/Birla Corporation Limited (BCL).jpg"
+                                    alt="Birla Corporation"></div>
+                            <div class="logo-tile"><img src="@ Logos/JK Lakshmi.png" alt="JK Lakshmi"></div>
+                            <div class="logo-tile"><img src="@ Logos/ACC_Limited_logo.svg.png" alt="ACC Limited"></div>
+                            <div class="logo-tile"><img src="@ Logos/Trident Group.png" alt="Trident"></div>
+                            <div class="logo-tile"><img src="@ Logos/Kallam Textiles.png" alt="Kallam Textiles"></div>
+                            <div class="logo-tile"><img src="@ Logos/Bureau Veritas.png" alt="Bureau Veritas"></div>
+                            <div class="logo-tile"><img src="@ Logos/SIDBI Logo.jpg" alt="SIDBI"></div>
+                            <div class="logo-tile"><img src="@ Logos/GMR.jpg" alt="GMR"></div>
+                            <div class="logo-tile"><img src="@ Logos/Jindal Power.png" alt="Jindal Power"></div>
+                            <div class="logo-tile"><img src="@ Logos/JSL.png" alt="JSL"></div>
+                            <div class="logo-tile"><img src="@ Logos/TATA Steel Logo.png" alt="TATA Steel"></div>
+                            <div class="logo-tile"><img src="@ Logos/West Coast Paper Mills Limited Logo.png"
+                                    alt="West Coast Paper"></div>
+                            <div class="logo-tile"><img src="@ Logos/Novotel Logo.jpg" alt="Novotel"></div>
+                        </div>
+                    </div>
+                </div>
+                <section id="locations" class="py-24 px-6 bg-white relative z-10">
+                    <div class="container mx-auto max-w-7xl">
+                        <div class="text-center mb-16 fade-in">
+                            <span class="text-[12px] font-bold tracking-[0.2em] uppercase mb-2 block"
+                                style="color:#F7941D;">Global Footprint</span>
+                            <h2 class="font-heading text-4xl md:text-5xl font-bold">Where We Work</h2>
+                        </div>
+                        <div
+                            class="relative w-full max-w-5xl mx-auto fade-in bg-white border border-gray-100 p-4 rounded-[2.5rem] shadow-2xl">
+                            <div id="leaflet-map"
+                                style="width:100%;height:518px;border-radius:2rem;overflow:hidden;z-index:0;"></div>
+                            <div class="flex flex-wrap justify-center gap-6 mt-6 pb-2 text-xs font-bold uppercase tracking-widest"
+                                style="color:#5f6368;">
+                                <span class="flex items-center gap-2"><span class="w-3 h-3 rounded-full"
+                                        style="background:#39B54A;"></span> HQ: Vizag (AP)</span>
+                                <span class="flex items-center gap-2"><span class="w-3 h-3 rounded-full"
+                                        style="background:#FDB813;"></span> Sri Lanka</span>
+                                <span class="flex items-center gap-2"><span class="w-3 h-3 rounded-full"
+                                        style="background:#FDB813;"></span> Nepal</span>
+                                <span class="flex items-center gap-2"><span class="w-3 h-3 rounded-full"
+                                        style="background:#FDB813;"></span> Philippines</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', () => {
+                            const map = L.map('leaflet-map', {
+                                center: [15, 95],
+                                zoom: 4,
+                                scrollWheelZoom: false
+                            });
+
+                            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                                attribution: '&copy; OpenStreetMap &copy; CARTO'
+                            }).addTo(map);
+
+                            const createIcon = (color) => L.divIcon({
+                                className: 'custom-map-icon',
+                                html: `<div style="background:${color};width:16px;height:16px;border:3px solid #fff;border-radius:50%;box-shadow:0 0 10px rgba(0,0,0,0.2);"></div>`,
+                                iconSize: [16, 16],
+                                iconAnchor: [8, 8]
+                            });
+
+                            const hqIcon = createIcon('#39B54A');
+                            const clientIcon = createIcon('#FDB813');
+
+                            L.marker([17.6868, 83.2185], { icon: hqIcon }).addTo(map).bindPopup('<b>Vizag (AP)</b><br>Global Headquarters');
+                            L.marker([7.8731, 80.7718], { icon: clientIcon }).addTo(map).bindPopup('<b>Sri Lanka</b><br>Client Projects');
+                            L.marker([28.3949, 84.1240], { icon: clientIcon }).addTo(map).bindPopup('<b>Nepal</b><br>Client Projects');
+                            L.marker([12.8797, 121.7740], { icon: clientIcon }).addTo(map).bindPopup('<b>Philippines</b><br>Client Projects');
+                        });
+                    </script>
+                </section>
+
+                <section class="py-24 bg-mid px-6">
+                    <div class="container mx-auto max-w-7xl">
+                        <h2 class="font-heading text-4xl md:text-5xl font-bold text-center mb-16 fade-in">The
+                            Visionaries Behind
+                            Our Mission</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                            <div class="glass-card p-8 text-center fade-in">
+                                <img src="@ Logos/RamprasadPulavarty.jpeg"
+                                    class="w-24 h-24 rounded-full mx-auto mb-5 border-2 border-jade shadow-lg object-cover object-top"
+                                    alt="Ramprasad Pulavarty">
+                                <h4 class="font-heading text-lg font-bold text-[#1d235c] mb-1">Ramprasad Pulavarty</h4>
+                                <div class="text-[10px] font-bold uppercase tracking-widest mb-3"
+                                    style="color:#FDB813;">
+                                    Director</div>
+                                <p class="text-muted text-[13px] mb-4 leading-relaxed">30+ years of experience in Energy
+                                    Efficiency,
+                                    Renewable Energy &amp; CEA, GHG Lead Verifier.</p>
+                                <a href="https://www.linkedin.com/in/ramprasadpulavarty/"
+                                    class="text-muted hover:text-[#1B3A7A] transition-colors"><i
+                                        class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                            <div class="glass-card p-8 text-center fade-in" style="transition-delay: 0.15s;">
+                                <img src="@ Logos/SrinivasaRaoGandepalli.jpeg"
+                                    class="w-24 h-24 rounded-full mx-auto mb-5 border-2 border-jade shadow-lg object-cover object-top"
+                                    alt="Srinivasa Rao Gandepalli">
+                                <h4 class="font-heading text-lg font-bold text-[#1d235c] mb-1">Srinivasa Rao Gandepalli
+                                </h4>
+                                <div class="text-[10px] font-bold uppercase tracking-widest mb-3"
+                                    style="color:#FDB813;">
+                                    Director</div>
+                                <p class="text-muted text-[13px] mb-4 leading-relaxed">30+ years of experience in Energy
+                                    Efficiency, Renewable Energy &amp; CEA, Accredited Energy Auditor, GHG Lead
+                                    Verifier.</p>
+                                <a href="https://www.linkedin.com/in/srinivasaraogandepalli/"
+                                    class="text-muted hover:text-[#1B3A7A] transition-colors"><i
+                                        class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                            <div class="glass-card p-8 text-center fade-in" style="transition-delay: 0.3s;">
+                                <img src="@ Logos/SekharMahabhashyam.jpeg"
+                                    class="w-24 h-24 rounded-full mx-auto mb-5 border-2 border-jade shadow-lg"
+                                    alt="Director">
+                                <h4 class="font-heading text-lg font-bold text-[#1d235c] mb-1">Sekhar Mahabhashyam</h4>
+                                <div class="text-[10px] font-bold uppercase tracking-widest mb-3"
+                                    style="color:#FDB813;">
+                                    Director</div>
+                                <p class="text-muted text-[13px] mb-4 leading-relaxed">30+ years of experience in
+                                    Environment
+                                    Management &amp; ISO 14000 Management System, ISO 9K1, ISO 45K1, ISO 50K1 </p>
+                                <a href="https://www.linkedin.com/in/sekhar-mahabhashyam-1024aa35/"
+                                    class="text-muted hover:text-[#1B3A7A] transition-colors"><i
+                                        class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="w-full py-16 bg-white border-y border-[rgba(0,0,0,0.05)] px-6">
+                    <div class="container mx-auto max-w-7xl">
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                            <div class="text-center md:border-r border-[rgba(0,0,0,0.1)] md:last:border-0 fade-in">
+                                <div class="font-heading text-5xl md:text-6xl font-bold mb-2 banner-stat"
+                                    style="color:#1B3A7A;" data-target="700">0</div>
+                                <div class="text-sm font-medium text-muted">Projects Completed</div>
+                            </div>
+                            <div class="text-center md:border-r border-[rgba(0,0,0,0.1)] md:last:border-0 fade-in">
+                                <div class="font-heading text-5xl md:text-6xl font-bold mb-2" style="color:#FDB813;">30+
+                                </div>
+                                <div class="text-sm font-medium text-muted">Years of Experience</div>
+                            </div>
+                            <div class="text-center md:border-r border-[rgba(0,0,0,0.1)] md:last:border-0 fade-in">
+                                <div class="font-heading text-5xl md:text-6xl font-bold mb-2 banner-stat"
+                                    style="color:#1B3A7A;" data-target="10">0</div>
+                                <div class="text-sm font-medium text-muted">Sectors Served</div>
+                            </div>
+                            <div class="text-center fade-in">
+                                <div class="font-heading text-5xl md:text-6xl font-bold mb-2" style="color:#FDB813;">
+                                    <span class="banner-stat" data-target="100">0</span>%
+                                </div>
+                                <div class="text-sm font-medium text-muted">Commitment to Quality</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="accreditations-teaser" class="py-24 px-6 bg-white relative">
+                    <div class="container mx-auto max-w-7xl">
+                        <div class="text-center max-w-3xl mx-auto mb-12 fade-in">
+                            <span class="text-[12px] font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-3 mb-4" style="color:#1B3A7A;">
+                                <span class="w-8 h-px" style="background:#1B3A7A;"></span> ACCREDITATIONS <span class="w-8 h-px" style="background:#1B3A7A;"></span>
+                            </span>
+                            <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6">Recognized by the Best in the Industry</h2>
+                            <p class="text-muted text-lg mb-8">Our credentials reflect decades of expertise validated by national and international bodies including BEE, MoMSME, and QCI.</p>
+                            <a href="accreditations.html" class="inline-flex items-center gap-3 px-8 py-4 rounded-full text-[15px] font-bold text-white transition-all" style="background:#0066B3;" onmouseover="this.style.background='#004f8c'" onmouseout="this.style.background='#0066B3'">
+                                View All Accreditations <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="resources-teaser" class="py-24 bg-mid px-6 relative">
+                    <div class="container mx-auto max-w-7xl">
+                        <div class="text-center max-w-3xl mx-auto mb-12 fade-in">
+                            <span class="text-[12px] font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-3 mb-4" style="color:#1B3A7A;">
+                                <span class="w-8 h-px" style="background:#1B3A7A;"></span> INSIGHTS &amp; UPDATES <span class="w-8 h-px" style="background:#1B3A7A;"></span>
+                            </span>
+                            <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6">Resources &amp; Latest Insights</h2>
+                            <p class="text-muted text-lg">Industry articles, project highlights, sustainability thought leadership, gallery, and downloadable media — all in one place.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 fade-in">
+                            <div class="glass-card p-7 flex items-start gap-4">
+                                <div class="w-11 h-11 rounded-full flex items-center justify-center shrink-0" style="background:rgba(27,58,122,.08);"><i class="fa-solid fa-bolt-lightning" style="color:#1B3A7A;"></i></div>
+                                <div><h4 class="font-heading font-bold text-[#1d235c] mb-1">PAT Cycle VII</h4><p class="text-muted text-sm leading-relaxed">What designated consumers need to know about the latest scheme requirements.</p></div>
+                            </div>
+                            <div class="glass-card p-7 flex items-start gap-4">
+                                <div class="w-11 h-11 rounded-full flex items-center justify-center shrink-0" style="background:rgba(57,181,74,.08);"><i class="fa-solid fa-leaf" style="color:#39B54A;"></i></div>
+                                <div><h4 class="font-heading font-bold text-[#1d235c] mb-1">BRSR Compliance</h4><p class="text-muted text-sm leading-relaxed">A roadmap for Indian corporates navigating SEBI sustainability reporting.</p></div>
+                            </div>
+                            <div class="glass-card p-7 flex items-start gap-4">
+                                <div class="w-11 h-11 rounded-full flex items-center justify-center shrink-0" style="background:rgba(253,184,19,.08);"><i class="fa-solid fa-solar-panel" style="color:#FDB813;"></i></div>
+                                <div><h4 class="font-heading font-bold text-[#1d235c] mb-1">Open Access Solar</h4><p class="text-muted text-sm leading-relaxed">Zero-CAPEX solar procurement for commercial and industrial units.</p></div>
+                            </div>
+                        </div>
+                        <div class="text-center fade-in">
+                            <a href="resources.html"
+                                class="inline-flex items-center gap-3 px-8 py-4 rounded-full text-[15px] font-bold text-white transition-all"
+                                style="background:#0066B3;" onmouseover="this.style.background='#004f8c'" onmouseout="this.style.background='#0066B3'">
+                                Visit Resources Page <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section id="contact" class="py-24 px-6 relative z-10">
+                    <div class="container mx-auto max-w-7xl">
+                        <div class="flex flex-col lg:flex-row gap-12">
+                            <div class="w-full lg:w-3/5 fade-in">
+                                <div class="text-left mb-8">
+                                    <span class="text-[12px] font-bold tracking-[0.2em] uppercase mb-2 block"
+                                        style="color:#1B3A7A;">GET IN TOUCH</span>
+                                    <h2 class="font-heading text-4xl md:text-5xl font-bold">Let's Build a Sustainable
+                                        Future
+                                        Together</h2>
+                                </div>
+                                <div class="glass-card p-8 md:p-10 text-center">
+                                    <h3 class="font-heading text-2xl font-bold mb-4 text-[#1d235c]">Ready for your
+                                        Energy Audit?
+                                    </h3>
+                                    <p class="text-sm text-muted mb-6">Our experts are prepared to help your
+                                        organization
+                                        achieve compliance and absolute efficiency.</p>
+                                    <a href="mailto:business@eastcoast.net.in"
+                                        style="background:#0066B3;color:#fff;padding:14px 32px;border-radius:8px;font-size:13px;font-weight:700;letter-spacing:.1em;text-decoration:none;text-transform:uppercase;display:inline-block;transition:background .2s;"
+                                        onmouseover="this.style.background='#004f8c'"
+                                        onmouseout="this.style.background='#0066B3'">Email
+                                        Us Directly</a>
+                                </div>
+                            </div>
+                            <div class="w-full lg:w-2/5 fade-in flex flex-col justify-center space-y-4">
+                                <div class="glass-card p-6 flex items-center gap-6">
+                                    <div
+                                        class="w-12 h-12 rounded-full border border-jade text-jade flex items-center justify-center text-xl shrink-0">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-xs text-muted uppercase tracking-wider mb-1">Phone</h5>
+                                        <p class="text-lg text-[#1d235c] font-medium">
+                                            <a href="tel:+919705300059" class="hover:text-jade transition-colors">+91
+                                                9705300059</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="glass-card p-6 flex items-center gap-6">
+                                    <div
+                                        class="w-12 h-12 rounded-full border border-jade text-jade flex items-center justify-center text-xl shrink-0">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-xs text-muted uppercase tracking-wider mb-1">Email</h5>
+                                        <p class="text-[15px] text-[#1d235c] font-medium break-all leading-tight">
+                                            <a href="mailto:business@eastcoast.net.in"
+                                                class="hover:text-jade transition-colors">business@eastcoast.net.in</a><br>
+                                            <a href="mailto:ramprasad.pulavarty@eastcoast.net.in"
+                                                class="hover:text-jade transition-colors">srinivasa.gandepalli@eastcoast.net.in</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="glass-card p-6 flex items-center gap-6">
+                                    <div
+                                        class="w-12 h-12 rounded-full border border-jade text-jade flex items-center justify-center text-xl shrink-0">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-xs text-muted uppercase tracking-wider mb-1">Location</h5>
+                                        <p class="text-[15px] text-[#1d235c] font-medium leading-tight">6-80/1, Priya
+                                            Gardens,
+                                            P.O Simhachalam,<br>Visakhapatnam-530028, AP</p>
+                                    </div>
+                                </div>
+                                <div class="pt-2 flex gap-4">
+                                    <a href="https://www.linkedin.com/in/east-coast-sustainable-private-ltd-632a38178/"
+                                        class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-[#1d235c] hover:text-jade hover:border-jade transition-colors"><i
+                                            class="fa-brands fa-linkedin-in"></i></a>
+                                    <a href="https://www.x.com/"
+                                        class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-[#1d235c] hover:text-jade hover:border-jade transition-colors"><i
+                                            class="fa-brands fa-twitter"></i></a>
+                                    <a href="https://www.facebook.com/"
+                                        class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-[#1d235c] hover:text-jade hover:border-jade transition-colors"><i
+                                            class="fa-brands fa-facebook-f"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer class="bg-white border-t border-[rgba(0,0,0,0.05)] pt-20 pb-8 px-6 relative z-10">
+                    <div class="container mx-auto max-w-7xl">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                            <div>
+                                <div class="mb-6">
+                                    <a href="#">
+                                        <img src="logotext.png" alt="East Coast Sustainable"
+                                            style="height:56px;width:auto;object-fit:contain;">
+                                    </a>
+                                </div>
+                                <p class="text-muted text-sm leading-relaxed">
+                                    Driving Efficiency, Enabling Sustainability.<br>Global-standard energy auditing
+                                    &amp;
+                                    consulting.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="text-[#1d235c] font-bold mb-6 text-lg">Quick Links</h4>
+                                <ul class="space-y-3 text-sm text-muted">
+                                    <li><a href="#" class="hover:text-gold transition-colors">Home</a></li>
+                                    <li><a href="#about" class="hover:text-gold transition-colors">About Us</a></li>
+                                    <li><a href="#services" class="hover:text-gold transition-colors">Services</a></li>
+                                    <li><a href="#why-us" class="hover:text-gold transition-colors">Why Us</a></li>
+                                    <li><a href="#clients" class="hover:text-gold transition-colors">Clients</a></li>
+                                    <li><a href="accreditations.html"
+                                            class="hover:text-gold transition-colors">Accreditations</a></li>
+                                    <li><a href="resources.html" class="hover:text-gold transition-colors">Resources</a></li>
+                                    <li><a href="#contact" class="hover:text-gold transition-colors">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-[#1d235c] font-bold mb-6 text-lg">Our Services</h4>
+                                <ul class="space-y-3 text-sm text-muted">
+                                    <li><a href="#services" class="hover:text-gold transition-colors">Energy
+                                            Efficiency</a></li>
+                                    <li><a href="#services" class="hover:text-gold transition-colors">Water Audits</a>
+                                    </li>
+                                    <li><a href="#services" class="hover:text-gold transition-colors">PAT Audits</a>
+                                    </li>
+                                    <li><a href="#services" class="hover:text-gold transition-colors">Carbon
+                                            Footprint</a></li>
+                                    <li><a href="#services" class="hover:text-gold transition-colors">Solar Energy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div
+                            class="pt-8 border-t border-[rgba(0,0,0,0.05)] flex flex-col md:flex-row justify-between items-center gap-4">
+                            <p class="text-xs text-muted">© 2026 East Coast Sustainable Private Limited. All Rights
+                                Reserved.
+                            </p>
+                            <div class="flex gap-4 text-xs text-muted">
+                                <a href="privacy-policy.html" class="hover:text-blue-900 transition-colors">Privacy
+                                    Policy</a>
+                                <span>|</span>
+                                <a href="privacy-policy.html" class="hover:text-blue-900 transition-colors">Terms of
+                                    Service</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+            <script src="main.js"></script>
+            <style>
+                @keyframes blink {
+
+                    0%,
+                    100% {
+                        opacity: 1
+                    }
+
+                    50% {
+                        opacity: 0
+                    }
+                }
+            </style>
+            <script>
+                (function () {
+                    const words = ['Efficiency', 'Performance', 'Compliance', 'Reliability'];
+                    const typeSpeed = 80;
+                    const eraseSpeed = 45;
+                    const pauseAfter = 1800;
+                    const pauseLoop = 400;
+                    let idx = 0;
+
+                    function type(el, text, i, cb) {
+                        if (i <= text.length) {
+                            el.textContent = text.slice(0, i);
+                            setTimeout(() => type(el, text, i + 1, cb), typeSpeed);
+                        } else {
+                            setTimeout(cb, pauseAfter);
+                        }
+                    }
+
+                    function erase(el, text, cb) {
+                        const len = el.textContent.length;
+                        if (len > 0) {
+                            el.textContent = text.slice(0, len - 1);
+                            setTimeout(() => erase(el, text, cb), eraseSpeed);
+                        } else {
+                            setTimeout(cb, pauseLoop);
+                        }
+                    }
+
+                    function loop() {
+                        const el = document.getElementById('type-word-1');
+                        const word = words[idx];
+                        idx = (idx + 1) % words.length;
+                        type(el, word, 0, () => erase(el, word, loop));
+                    }
+
+                    window.addEventListener('DOMContentLoaded', () => setTimeout(loop, 600));
+                })();
+            </script>
+            <script>
+                function openModal(title, color, icon, body) {
+                    const modal = document.getElementById('service-modal');
+                    const card = document.getElementById('modal-card');
+                    const wrap = document.getElementById('modal-icon-wrap');
+                    const iconEl = document.getElementById('modal-icon');
+                    const titleEl = document.getElementById('modal-title');
+                    const bodyEl = document.getElementById('modal-body');
+
+                    titleEl.textContent = title;
+                    bodyEl.innerHTML = body;
+                    wrap.style.background = color;
+                    iconEl.className = 'fa-solid ' + icon;
+
+                    document.body.style.overflow = 'hidden';
+                    modal.style.opacity = '1';
+                    modal.style.pointerEvents = 'auto';
+                    modal.style.backdropFilter = 'blur(6px)';
+                    requestAnimationFrame(() => {
+                        card.style.transform = 'scale(1) translateY(0)';
+                        card.style.opacity = '1';
+                    });
+                }
+
+                function closeModal() {
+                    const modal = document.getElementById('service-modal');
+                    const card = document.getElementById('modal-card');
+                    modal.style.opacity = '0';
+                    modal.style.backdropFilter = 'blur(0px)';
+                    card.style.transform = 'scale(.88) translateY(24px)';
+                    card.style.opacity = '0';
+                    setTimeout(() => { modal.style.pointerEvents = 'none'; }, 320);
+                    document.body.style.overflow = '';
+                }
+
+                document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+            </script>
+
+            <div id="g-signin-hidden"
+                style="position:absolute;opacity:0;pointer-events:none;width:1px;height:1px;overflow:hidden;"></div>
+
+            <script>
+                (function () {
+                    const GOOGLE_CLIENT_ID = 'YOUR_GOOGLE_CLIENT_ID';
+                    let isAuthenticated = false;
+                    let currentUser = null;
+                    let gisReady = false;
+
+                    window.handleCredentialResponse = function (response) {
+                        fetch('/api/auth/google', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ credential: response.credential })
+                        })
+                            .then(res => {
+                                if (res.status === 403) {
+                                    showAuthToast('Access Denied: You must use a company email address.', 'error');
+                                    throw new Error('Domain not allowed');
+                                }
+                                if (!res.ok) throw new Error('Auth failed');
+                                return res.json();
+                            })
+                            .then(data => {
+                                if (data.success) {
+                                    isAuthenticated = true;
+                                    currentUser = data.user;
+                                    updateAuthUI();
+                                    showAuthToast('Welcome, ' + data.user.name + '!', 'success');
+                                }
+                            })
+                            .catch(err => {
+                                if (err.message !== 'Domain not allowed') {
+                                    showAuthToast('Sign-in failed. Please try again.', 'error');
+                                }
+                                console.error('Auth error:', err);
+                            });
+                    };
+
+                    window.triggerGoogleLogin = function () {
+                        if (!gisReady) {
+                            showAuthToast('Connecting to Google… please wait.', 'info');
+                            setTimeout(window.triggerGoogleLogin, 800);
+                            return;
+                        }
+                        const btn = document.querySelector('#g-signin-hidden [role="button"]');
+                        if (btn) {
+                            btn.click();
+                        } else {
+                            google.accounts.id.prompt();
+                        }
+                    };
+
+                    window.toggleUserDropdown = function () {
+                        const dd = document.getElementById('user-dropdown');
+                        dd.style.display = dd.style.display === 'none' ? 'block' : 'none';
+                    };
+
+                    document.addEventListener('click', function (e) {
+                        const menu = document.getElementById('nav-user-menu');
+                        const dd = document.getElementById('user-dropdown');
+                        if (menu && dd && !menu.contains(e.target)) {
+                            dd.style.display = 'none';
+                        }
+                    });
+
+                    window.handleLogout = function () {
+                        fetch('/api/auth/logout', { method: 'POST' })
+                            .then(() => {
+                                isAuthenticated = false;
+                                currentUser = null;
+                                updateAuthUI();
+                                showAuthToast('Signed out successfully.', 'success');
+                                if (typeof google !== 'undefined' && google.accounts) {
+                                    google.accounts.id.disableAutoSelect();
+                                }
+                            });
+                    };
+
+                    function updateAuthUI() {
+                        const loginBtn = document.getElementById('nav-login-btn');
+                        const userMenu = document.getElementById('nav-user-menu');
+                        const embedControls = document.getElementById('embed-auth-controls');
+                        const mobileLoginBtn = document.getElementById('mobile-login-btn');
+                        const mobileUserInfo = document.getElementById('mobile-user-info');
+
+                        if (isAuthenticated && currentUser) {
+                            if (loginBtn) loginBtn.style.display = 'none';
+                            if (userMenu) {
+                                userMenu.style.display = 'block';
+                                document.getElementById('nav-user-avatar').src = currentUser.picture || '';
+                                document.getElementById('nav-user-name').textContent = currentUser.name.split(' ')[0];
+                                document.getElementById('dropdown-email').textContent = currentUser.email;
+                            }
+                            if (mobileLoginBtn) mobileLoginBtn.style.display = 'none';
+                            if (mobileUserInfo) {
+                                mobileUserInfo.style.display = 'flex';
+                                document.getElementById('mobile-user-avatar').src = currentUser.picture || '';
+                                document.getElementById('mobile-user-name').textContent = currentUser.name;
+                            }
+                            if (embedControls) embedControls.style.display = 'block';
+                            document.querySelectorAll('.embed-remove').forEach(btn => btn.style.display = 'flex');
+                        } else {
+                            if (loginBtn) loginBtn.style.display = 'flex';
+                            if (userMenu) userMenu.style.display = 'none';
+                            if (mobileLoginBtn) mobileLoginBtn.style.display = 'flex';
+                            if (mobileUserInfo) mobileUserInfo.style.display = 'none';
+                            if (embedControls) embedControls.style.display = 'none';
+                            document.querySelectorAll('.embed-remove').forEach(btn => btn.style.display = 'none');
+                        }
+                    }
+
+                    function showAuthToast(message, type) {
+                        const existing = document.getElementById('auth-toast');
+                        if (existing) existing.remove();
+
+                        const toast = document.createElement('div');
+                        toast.id = 'auth-toast';
+                        toast.style.cssText = 'position:fixed;bottom:24px;right:24px;z-index:9999;padding:14px 24px;border-radius:12px;font-family:"Plus Jakarta Sans",sans-serif;font-size:14px;font-weight:600;color:#fff;box-shadow:0 8px 32px rgba(0,0,0,.15);transform:translateY(20px);opacity:0;transition:all .3s cubic-bezier(.34,1.56,.64,1);max-width:380px;';
+                        toast.style.background = type === 'error' ? '#ea4335' : '#39B54A';
+                        toast.innerHTML = '<i class="fa-solid ' + (type === 'error' ? 'fa-circle-exclamation' : 'fa-circle-check') + ' mr-2"></i>' + message;
+
+                        document.body.appendChild(toast);
+                        requestAnimationFrame(() => {
+                            toast.style.transform = 'translateY(0)';
+                            toast.style.opacity = '1';
+                        });
+                        setTimeout(() => {
+                            toast.style.transform = 'translateY(20px)';
+                            toast.style.opacity = '0';
+                            setTimeout(() => toast.remove(), 300);
+                        }, 4000);
+                    }
+
+                    function initGIS() {
+                        if (typeof google === 'undefined' || !google.accounts) {
+                            setTimeout(initGIS, 200);
+                            return;
+                        }
+                        google.accounts.id.initialize({
+                            client_id: GOOGLE_CLIENT_ID,
+                            callback: handleCredentialResponse,
+                            auto_select: false,
+                            ux_mode: 'popup'
+                        });
+                        google.accounts.id.renderButton(
+                            document.getElementById('g-signin-hidden'),
+                            { type: 'standard', size: 'large', theme: 'outline' }
+                        );
+                        gisReady = true;
+                    }
+
+                    function checkSession() {
+                        fetch('/api/auth/me')
+                            .then(res => {
+                                if (res.ok) return res.json();
+                                throw new Error('Not authenticated');
+                            })
+                            .then(data => {
+                                if (data.authenticated) {
+                                    isAuthenticated = true;
+                                    currentUser = data.user;
+                                    updateAuthUI();
+                                }
+                            })
+                            .catch(() => {
+                                updateAuthUI();
+                            });
+                    }
+
+                    window.addEventListener('DOMContentLoaded', () => {
+                        initGIS();
+                        checkSession();
+                    });
+                })();
+            </script>
+
+</body>
+
+</html>

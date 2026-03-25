@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources — East Coast Sustainable</title>
+    <meta name="description" content="Industry insights, project highlights, sustainability thought leadership, gallery, and embedded media from East Coast Sustainable.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mid: '#f8f9fa',
+                        orange: '#F7941D',
+                        yellow: '#FDB813',
+                        cyan: '#29ABE2',
+                        ocean: '#0066B3',
+                        navy: '#1B3A7A',
+                        green: '#39B54A',
+                        jade: '#39B54A',
+                        gold: '#FDB813',
+                        muted: '#5f6368',
+                        border: '#e8eaed',
+                        deep: '#1B3A7A',
+                    },
+                    fontFamily: {
+                        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        body: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .blog-card { transition: transform .25s ease, box-shadow .25s ease; }
+        .blog-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(27,58,122,.12); }
+        .gallery-overlay { background: linear-gradient(to top, rgba(27,58,122,.65) 0%, transparent 60%); opacity: 0; transition: opacity .3s; }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        .page-hero { background: linear-gradient(135deg, #1B3A7A 0%, #0066B3 60%, #29ABE2 100%); }
+    </style>
+</head>
+
+<body class="font-body text-[#5f6368] antialiased overflow-x-hidden" style="font-family:'Plus Jakarta Sans',sans-serif;background:#fff;">
+
+    <div class="content-layer">
+        <div class="hidden md:block border-b" style="border-color:#e8eaed;background:#fff;">
+            <div class="container mx-auto px-6 max-w-7xl flex justify-between items-center py-2" style="font-size:13px;color:#5f6368;">
+                <div class="flex gap-6">
+                    <a href="tel:+919705300059" style="color:#5f6368;text-decoration:none;" onmouseover="this.style.color='#0066B3'" onmouseout="this.style.color='#5f6368'"><i class="fa-solid fa-phone mr-1" style="color:#0066B3;"></i> +91 9705300059</a>
+                    <a href="mailto:business@eastcoast.net.in" style="color:#5f6368;text-decoration:none;" onmouseover="this.style.color='#0066B3'" onmouseout="this.style.color='#5f6368'"><i class="fa-solid fa-envelope mr-1" style="color:#0066B3;"></i> business@eastcoast.net.in</a>
+                </div>
+                <div class="flex gap-4">
+                    <a href="https://www.linkedin.com/in/east-coast-sustainable-private-ltd-632a38178/" style="color:#5f6368;text-decoration:none;" onmouseover="this.style.color='#0077B6'" onmouseout="this.style.color='#5f6368'"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.x.com/" style="color:#5f6368;text-decoration:none;" onmouseover="this.style.color='#0077B6'" onmouseout="this.style.color='#5f6368'"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/" style="color:#5f6368;text-decoration:none;" onmouseover="this.style.color='#0077B6'" onmouseout="this.style.color='#5f6368'"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <nav id="navbar" class="fixed w-full top-0 md:top-[37px] left-0 z-50" style="background:#fff;">
+            <div class="container mx-auto px-6 max-w-7xl py-3 flex justify-between items-center" style="border-bottom:1px solid #e8eaed;">
+                <a href="index.html" class="flex items-center">
+                    <img src="logotext.png" alt="East Coast Sustainable" style="height:64px;width:auto;object-fit:contain;">
+                </a>
+                <ul class="hidden md:flex items-center space-x-7" style="font-size:14px;font-weight:500;color:#202124;">
+                    <li><a href="index.html" style="text-decoration:none;color:#202124;" onmouseover="this.style.color='#0077B6'" onmouseout="this.style.color='#202124'">Home</a></li>
+                    <li><a href="index.html#about" style="text-decoration:none;color:#202124;" onmouseover="this.style.color='#0077B6'" onmouseout="this.style.color='#202124'">About</a></li>
+                    <li><a href="index.html#services" style="text-decoration:none;color:#202124;" onmouseover="this.style.color='#0077B6'" onmouseout="this.style.color='#202124'">Services</a></li>
+                    <li><a href="index.html#why-us" style="text-decoration:none;color:#202124;" onmouseover="this.style.color='#0077B6'" onmouseout="this.style.color='#202124'">Why Us</a></li>
+                    <li><a href="index.html#clients" style="text-decoration:none;color:#202124;" onmouseover="this.style.color='#0077B6'" onmouseout="this.style.color='#202124'">Clients</a></li>
+                    <li><a href="accreditations.html" style="text-decoration:none;color:#202124;" onmouseover="this.style.color='#0077B6'" onmouseout="this.style.color='#202124'">Accreditations</a></li>
+                    <li><a href="resources.html" style="text-decoration:none;color:#0066B3;font-weight:700;" aria-current="page">Resources</a></li>
+                    <li><a href="index.html#contact" style="text-decoration:none;color:#202124;" onmouseover="this.style.color='#0077B6'" onmouseout="this.style.color='#202124'">Contact</a></li>
+                </ul>
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="index.html#contact"
+                        style="background:#0066B3;color:#fff;padding:9px 22px;border-radius:6px;font-size:14px;font-weight:600;text-decoration:none;transition:background .2s;"
+                        onmouseover="this.style.background='#004f8c'" onmouseout="this.style.background='#0066B3'">Get a Consultation</a>
+                    <button id="nav-login-btn" onclick="triggerGoogleLogin()"
+                        class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all"
+                        style="background:#fff;border:1.5px solid #e8eaed;color:#1d235c;cursor:pointer;"
+                        onmouseover="this.style.borderColor='#0066B3';this.style.color='#0066B3'"
+                        onmouseout="this.style.borderColor='#e8eaed';this.style.color='#1d235c'">
+                        <i class="fa-brands fa-google text-[14px]"></i> Sign In
+                    </button>
+                    <div id="nav-user-menu" class="relative" style="display:none;">
+                        <button id="nav-user-btn" onclick="toggleUserDropdown()"
+                            class="flex items-center gap-2 px-2 py-1 rounded-full transition-all"
+                            style="background:#f8f9fa;border:1.5px solid #e8eaed;cursor:pointer;">
+                            <img id="nav-user-avatar" src="" alt="" class="w-7 h-7 rounded-full object-cover">
+                            <span id="nav-user-name" class="text-sm font-medium text-[#1d235c] max-w-[100px] truncate"></span>
+                            <i class="fa-solid fa-chevron-down text-[10px] text-muted mr-1"></i>
+                        </button>
+                        <div id="user-dropdown"
+                            class="absolute right-0 top-full mt-2 w-56 bg-white rounded-xl shadow-2xl border border-[#e8eaed] py-2 z-50"
+                            style="display:none;">
+                            <div class="px-4 py-2 border-b border-[#e8eaed]">
+                                <p id="dropdown-email" class="text-xs text-muted truncate"></p>
+                            </div>
+                            <button onclick="handleLogout()"
+                                class="w-full text-left px-4 py-2.5 text-sm text-[#ea4335] hover:bg-[#fce8e6] transition-colors flex items-center gap-2"
+                                style="border:none;background:none;cursor:pointer;">
+                                <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <button id="hamburger" class="md:hidden text-2xl focus:outline-none" style="color:#1d235c;background:none;border:none;cursor:pointer;">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="fixed inset-0 z-[60] opacity-0 invisible flex flex-col items-center justify-center" style="background:#fff;pointer-events:none;">
+            <button id="close-menu" class="absolute top-6 right-6 text-3xl focus:outline-none" style="color:#1d235c;background:none;border:none;cursor:pointer;">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <ul class="flex flex-col space-y-6 text-center" style="font-size:26px;font-weight:700;">
+                <li><a href="index.html" class="mobile-link block" style="color:#202124;text-decoration:none;" onmouseover="this.style.color='#F7941D'" onmouseout="this.style.color='#202124'">Home</a></li>
+                <li><a href="index.html#about" class="mobile-link block" style="color:#202124;text-decoration:none;" onmouseover="this.style.color='#F7941D'" onmouseout="this.style.color='#202124'">About</a></li>
+                <li><a href="index.html#services" class="mobile-link block" style="color:#202124;text-decoration:none;" onmouseover="this.style.color='#F7941D'" onmouseout="this.style.color='#202124'">Services</a></li>
+                <li><a href="index.html#why-us" class="mobile-link block" style="color:#202124;text-decoration:none;" onmouseover="this.style.color='#F7941D'" onmouseout="this.style.color='#202124'">Why Us</a></li>
+                <li><a href="index.html#clients" class="mobile-link block" style="color:#202124;text-decoration:none;" onmouseover="this.style.color='#F7941D'" onmouseout="this.style.color='#202124'">Clients</a></li>
+                <li><a href="accreditations.html" class="mobile-link block" style="color:#202124;text-decoration:none;" onmouseover="this.style.color='#F7941D'" onmouseout="this.style.color='#202124'">Accreditations</a></li>
+                <li><a href="resources.html" class="mobile-link block" style="color:#0066B3;text-decoration:none;font-weight:800;">Resources</a></li>
+                <li><a href="index.html#contact" class="mobile-link block" style="color:#202124;text-decoration:none;" onmouseover="this.style.color='#F7941D'" onmouseout="this.style.color='#202124'">Contact</a></li>
+            </ul>
+            <div class="mt-10 flex flex-col items-center gap-4">
+                <button id="mobile-login-btn"
+                    onclick="triggerGoogleLogin(); document.getElementById('mobile-menu').classList.remove('open'); document.getElementById('mobile-menu').style.pointerEvents='none';"
+                    class="flex items-center gap-3 px-8 py-3 rounded-lg text-base font-semibold transition-all"
+                    style="background:#fff;border:2px solid #e8eaed;color:#1d235c;cursor:pointer;">
+                    <i class="fa-brands fa-google"></i> Sign In with Google
+                </button>
+                <div id="mobile-user-info" style="display:none;" class="flex flex-col items-center gap-3">
+                    <img id="mobile-user-avatar" src="" alt="" class="w-14 h-14 rounded-full object-cover border-2 border-[#e8eaed]">
+                    <span id="mobile-user-name" class="text-lg font-semibold text-[#1d235c]"></span>
+                    <button onclick="handleLogout(); document.getElementById('mobile-menu').classList.remove('open'); document.getElementById('mobile-menu').style.pointerEvents='none';"
+                        class="flex items-center gap-2 px-6 py-2 rounded-lg text-sm font-semibold transition-all"
+                        style="background:none;border:1.5px solid #ea4335;color:#ea4335;cursor:pointer;">
+                        <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <section class="page-hero pt-40 pb-20 px-6 text-white text-center" style="margin-top:37px;">
+            <div class="container mx-auto max-w-4xl fade-in">
+                <span class="text-[12px] font-bold tracking-[0.2em] uppercase mb-4 block opacity-70">INSIGHTS &amp; UPDATES</span>
+                <h1 class="font-heading text-5xl md:text-6xl font-bold mb-5">Resources</h1>
+                <p class="text-lg md:text-xl opacity-80 max-w-2xl mx-auto leading-relaxed">
+                    Industry insights, project highlights, sustainability thought leadership, and media from East Coast Sustainable.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-24 bg-mid px-6">
+            <div class="container mx-auto max-w-7xl">
+                <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
+                    <span class="text-[12px] font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-3 mb-4" style="color:#1B3A7A;">
+                        <span class="w-8 h-px" style="background:#1B3A7A;"></span> LATEST ARTICLES <span class="w-8 h-px" style="background:#1B3A7A;"></span>
+                    </span>
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6">Latest from East Coast</h2>
+                    <p class="text-muted text-lg">Industry insights, project highlights, and sustainability thought leadership.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <article class="blog-card glass-card overflow-hidden fade-in group">
+                        <div class="relative h-52 overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center" style="background:linear-gradient(135deg,#1B3A7A 0%,#0066B3 100%);">
+                                <i class="fa-solid fa-bolt-lightning text-5xl text-white/30"></i>
+                            </div>
+                            <div class="absolute top-3 left-3 z-10">
+                                <span class="inline-block px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/90 text-[#1B3A7A]">Energy</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 text-xs text-muted mb-3">
+                                <span><i class="fa-regular fa-calendar mr-1"></i> Mar 15, 2026</span>
+                                <span><i class="fa-regular fa-clock mr-1"></i> 5 min read</span>
+                            </div>
+                            <h3 class="font-heading text-lg font-bold text-[#1d235c] mb-2 group-hover:text-[#0066B3] transition-colors">
+                                PAT Cycle VII: What Designated Consumers Need to Know</h3>
+                            <p class="text-muted text-sm leading-relaxed mb-4">An overview of the latest PAT scheme requirements, timelines, and compliance strategies for industrial consumers.</p>
+                            <a href="#" class="inline-flex items-center gap-2 text-sm font-semibold" style="color:#0066B3;">Read more <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card glass-card overflow-hidden fade-in group" style="transition-delay:.1s;">
+                        <div class="relative h-52 overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center" style="background:linear-gradient(135deg,#39B54A 0%,#29ABE2 100%);">
+                                <i class="fa-solid fa-leaf text-5xl text-white/30"></i>
+                            </div>
+                            <div class="absolute top-3 left-3 z-10">
+                                <span class="inline-block px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/90 text-[#39B54A]">Sustainability</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 text-xs text-muted mb-3">
+                                <span><i class="fa-regular fa-calendar mr-1"></i> Feb 28, 2026</span>
+                                <span><i class="fa-regular fa-clock mr-1"></i> 4 min read</span>
+                            </div>
+                            <h3 class="font-heading text-lg font-bold text-[#1d235c] mb-2 group-hover:text-[#0066B3] transition-colors">
+                                BRSR Compliance: A Roadmap for Indian Corporates</h3>
+                            <p class="text-muted text-sm leading-relaxed mb-4">How top-listed companies are meeting SEBI's Business Responsibility and Sustainability Reporting requirements.</p>
+                            <a href="#" class="inline-flex items-center gap-2 text-sm font-semibold" style="color:#0066B3;">Read more <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card glass-card overflow-hidden fade-in group" style="transition-delay:.2s;">
+                        <div class="relative h-52 overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center" style="background:linear-gradient(135deg,#F7941D 0%,#FDB813 100%);">
+                                <i class="fa-solid fa-solar-panel text-5xl text-white/30"></i>
+                            </div>
+                            <div class="absolute top-3 left-3 z-10">
+                                <span class="inline-block px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/90 text-[#F7941D]">Solar</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 text-xs text-muted mb-3">
+                                <span><i class="fa-regular fa-calendar mr-1"></i> Jan 10, 2026</span>
+                                <span><i class="fa-regular fa-clock mr-1"></i> 6 min read</span>
+                            </div>
+                            <h3 class="font-heading text-lg font-bold text-[#1d235c] mb-2 group-hover:text-[#0066B3] transition-colors">
+                                Open Access Solar: Zero-CAPEX Energy for Industries</h3>
+                            <p class="text-muted text-sm leading-relaxed mb-4">How commercial and industrial units can procure solar energy at discounted tariffs with zero capital investment.</p>
+                            <a href="#" class="inline-flex items-center gap-2 text-sm font-semibold" style="color:#0066B3;">Read more <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="fade-in">
+                    <h3 class="font-heading text-2xl md:text-3xl font-bold text-center mb-10 text-[#1d235c]">Gallery</h3>
+                    <div id="blog-gallery" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <div class="gallery-item rounded-xl overflow-hidden relative group cursor-pointer aspect-[4/3]" style="background:linear-gradient(135deg,#1B3A7A,#0066B3);">
+                            <div class="w-full h-full flex items-center justify-center"><i class="fa-solid fa-industry text-4xl text-white/20"></i></div>
+                            <div class="gallery-overlay absolute inset-0 flex items-end p-4"><span class="text-white text-sm font-semibold">Energy Audit — Steel Plant</span></div>
+                        </div>
+                        <div class="gallery-item rounded-xl overflow-hidden relative group cursor-pointer aspect-[4/3]" style="background:linear-gradient(135deg,#39B54A,#29ABE2);">
+                            <div class="w-full h-full flex items-center justify-center"><i class="fa-solid fa-solar-panel text-4xl text-white/20"></i></div>
+                            <div class="gallery-overlay absolute inset-0 flex items-end p-4"><span class="text-white text-sm font-semibold">Solar Feasibility Study</span></div>
+                        </div>
+                        <div class="gallery-item rounded-xl overflow-hidden relative group cursor-pointer aspect-[4/3]" style="background:linear-gradient(135deg,#F7941D,#FDB813);">
+                            <div class="w-full h-full flex items-center justify-center"><i class="fa-solid fa-certificate text-4xl text-white/20"></i></div>
+                            <div class="gallery-overlay absolute inset-0 flex items-end p-4"><span class="text-white text-sm font-semibold">BEE Accreditation Ceremony</span></div>
+                        </div>
+                        <div class="gallery-item rounded-xl overflow-hidden relative group cursor-pointer aspect-[4/3]" style="background:linear-gradient(135deg,#1B3A7A,#F7941D);">
+                            <div class="w-full h-full flex items-center justify-center"><i class="fa-solid fa-users text-4xl text-white/20"></i></div>
+                            <div class="gallery-overlay absolute inset-0 flex items-end p-4"><span class="text-white text-sm font-semibold">Team Training Workshop</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 fade-in">
+                    <h3 class="font-heading text-2xl md:text-3xl font-bold text-center mb-4 text-[#1d235c]">Embedded Media</h3>
+                    <p class="text-muted text-center text-sm mb-8">Add images, videos, and files to showcase your work.</p>
+                    <div id="embed-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    </div>
+                    <div id="embed-auth-controls" class="text-center mt-8" style="display:none;">
+                        <button id="add-embed-btn" onclick="openEmbedModal()"
+                            class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-[14px] font-semibold transition-all"
+                            style="background:#0066B3;color:#fff;" onmouseover="this.style.background='#004f8c'" onmouseout="this.style.background='#0066B3'">
+                            <i class="fa-solid fa-plus"></i> Add Embed
+                        </button>
+                    </div>
+                </div>
+
+                <div id="embed-modal"
+                    class="fixed inset-0 z-[200] flex items-center justify-center p-4 opacity-0 pointer-events-none"
+                    style="backdrop-filter:blur(0px);transition:opacity .3s ease,backdrop-filter .3s ease;">
+                    <div class="absolute inset-0" style="background:rgba(27,58,122,.45);" onclick="closeEmbedModal()"></div>
+                    <div id="embed-modal-card"
+                        class="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 z-10"
+                        style="transform:scale(.88) translateY(24px);opacity:0;transition:transform .35s cubic-bezier(.34,1.56,.64,1),opacity .3s ease;">
+                        <button onclick="closeEmbedModal()"
+                            class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full"
+                            style="background:#f1f3f4;border:none;cursor:pointer;font-size:16px;color:#5f6368;">&#10005;</button>
+                        <h3 class="font-heading text-xl font-bold text-[#1B3A7A] mb-6">Add Embed</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-[#1d235c] mb-1">Type</label>
+                                <select id="embed-type" class="glass-input w-full" style="font-size:14px;">
+                                    <option value="image">Image</option>
+                                    <option value="video">Video (YouTube / URL)</option>
+                                    <option value="file">File / Document</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-[#1d235c] mb-1">Title</label>
+                                <input id="embed-title" type="text" class="glass-input w-full" placeholder="Enter a title..." style="font-size:14px;">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-[#1d235c] mb-1">URL / Source</label>
+                                <input id="embed-url" type="text" class="glass-input w-full" placeholder="Paste URL or file path..." style="font-size:14px;">
+                            </div>
+                            <button onclick="addEmbed()"
+                                class="w-full py-3 rounded-lg text-[14px] font-bold text-white transition-all"
+                                style="background:#0066B3;" onmouseover="this.style.background='#004f8c'" onmouseout="this.style.background='#0066B3'">
+                                Add to Page
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-white border-t border-[rgba(0,0,0,0.05)] pt-20 pb-8 px-6 relative z-10">
+            <div class="container mx-auto max-w-7xl">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                    <div>
+                        <div class="mb-6">
+                            <a href="index.html"><img src="logotext.png" alt="East Coast Sustainable" style="height:56px;width:auto;object-fit:contain;"></a>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed">Driving Efficiency, Enabling Sustainability.<br>Global-standard energy auditing &amp; consulting.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-[#1d235c] font-bold mb-6 text-lg">Quick Links</h4>
+                        <ul class="space-y-3 text-sm text-muted">
+                            <li><a href="index.html" class="hover:text-gold transition-colors">Home</a></li>
+                            <li><a href="index.html#about" class="hover:text-gold transition-colors">About Us</a></li>
+                            <li><a href="index.html#services" class="hover:text-gold transition-colors">Services</a></li>
+                            <li><a href="index.html#why-us" class="hover:text-gold transition-colors">Why Us</a></li>
+                            <li><a href="index.html#clients" class="hover:text-gold transition-colors">Clients</a></li>
+                            <li><a href="accreditations.html" class="hover:text-gold transition-colors">Accreditations</a></li>
+                            <li><a href="resources.html" class="hover:text-gold transition-colors">Resources</a></li>
+                            <li><a href="index.html#contact" class="hover:text-gold transition-colors">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-[#1d235c] font-bold mb-6 text-lg">Our Services</h4>
+                        <ul class="space-y-3 text-sm text-muted">
+                            <li><a href="index.html#services" class="hover:text-gold transition-colors">Energy Efficiency</a></li>
+                            <li><a href="index.html#services" class="hover:text-gold transition-colors">Water Audits</a></li>
+                            <li><a href="index.html#services" class="hover:text-gold transition-colors">PAT Audits</a></li>
+                            <li><a href="index.html#services" class="hover:text-gold transition-colors">Carbon Footprint</a></li>
+                            <li><a href="index.html#services" class="hover:text-gold transition-colors">Solar Energy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pt-8 border-t border-[rgba(0,0,0,0.05)] flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-xs text-muted">© 2026 East Coast Sustainable Private Limited. All Rights Reserved.</p>
+                    <div class="flex gap-4 text-xs text-muted">
+                        <a href="privacy-policy.html" class="hover:text-blue-900 transition-colors">Privacy Policy</a>
+                        <span>|</span>
+                        <a href="privacy-policy.html" class="hover:text-blue-900 transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="g-signin-hidden" style="position:absolute;opacity:0;pointer-events:none;width:1px;height:1px;overflow:hidden;"></div>
+
+    <script src="main.js"></script>
+
+    <script>
+        (function () {
+            const GOOGLE_CLIENT_ID = 'YOUR_GOOGLE_CLIENT_ID';
+            let isAuthenticated = false;
+            let currentUser = null;
+            let gisReady = false;
+
+            window.handleCredentialResponse = function (response) {
+                fetch('/api/auth/google', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ credential: response.credential })
+                })
+                    .then(res => {
+                        if (res.status === 403) { showAuthToast('Access Denied: You must use a company email address.', 'error'); throw new Error('Domain not allowed'); }
+                        if (!res.ok) throw new Error('Auth failed');
+                        return res.json();
+                    })
+                    .then(data => {
+                        if (data.success) { isAuthenticated = true; currentUser = data.user; updateAuthUI(); showAuthToast('Welcome, ' + data.user.name + '!', 'success'); }
+                    })
+                    .catch(err => { if (err.message !== 'Domain not allowed') showAuthToast('Sign-in failed. Please try again.', 'error'); });
+            };
+
+            window.triggerGoogleLogin = function () {
+                if (!gisReady) { showAuthToast('Connecting to Google… please wait.', 'info'); setTimeout(window.triggerGoogleLogin, 800); return; }
+                const btn = document.querySelector('#g-signin-hidden [role="button"]');
+                if (btn) btn.click(); else google.accounts.id.prompt();
+            };
+
+            window.toggleUserDropdown = function () {
+                const dd = document.getElementById('user-dropdown');
+                dd.style.display = dd.style.display === 'none' ? 'block' : 'none';
+            };
+
+            document.addEventListener('click', function (e) {
+                const menu = document.getElementById('nav-user-menu');
+                const dd = document.getElementById('user-dropdown');
+                if (menu && dd && !menu.contains(e.target)) dd.style.display = 'none';
+            });
+
+            window.handleLogout = function () {
+                fetch('/api/auth/logout', { method: 'POST' }).then(() => {
+                    isAuthenticated = false; currentUser = null; updateAuthUI(); showAuthToast('Signed out successfully.', 'success');
+                    if (typeof google !== 'undefined' && google.accounts) google.accounts.id.disableAutoSelect();
+                });
+            };
+
+            function updateAuthUI() {
+                const loginBtn = document.getElementById('nav-login-btn');
+                const userMenu = document.getElementById('nav-user-menu');
+                const embedControls = document.getElementById('embed-auth-controls');
+                const mobileLoginBtn = document.getElementById('mobile-login-btn');
+                const mobileUserInfo = document.getElementById('mobile-user-info');
+
+                if (isAuthenticated && currentUser) {
+                    if (loginBtn) loginBtn.style.display = 'none';
+                    if (userMenu) { userMenu.style.display = 'block'; document.getElementById('nav-user-avatar').src = currentUser.picture || ''; document.getElementById('nav-user-name').textContent = currentUser.name.split(' ')[0]; document.getElementById('dropdown-email').textContent = currentUser.email; }
+                    if (mobileLoginBtn) mobileLoginBtn.style.display = 'none';
+                    if (mobileUserInfo) { mobileUserInfo.style.display = 'flex'; document.getElementById('mobile-user-avatar').src = currentUser.picture || ''; document.getElementById('mobile-user-name').textContent = currentUser.name; }
+                    if (embedControls) embedControls.style.display = 'block';
+                    document.querySelectorAll('.embed-remove').forEach(btn => btn.style.display = 'flex');
+                } else {
+                    if (loginBtn) loginBtn.style.display = 'flex';
+                    if (userMenu) userMenu.style.display = 'none';
+                    if (mobileLoginBtn) mobileLoginBtn.style.display = 'flex';
+                    if (mobileUserInfo) mobileUserInfo.style.display = 'none';
+                    if (embedControls) embedControls.style.display = 'none';
+                    document.querySelectorAll('.embed-remove').forEach(btn => btn.style.display = 'none');
+                }
+            }
+
+            function showAuthToast(message, type) {
+                const existing = document.getElementById('auth-toast');
+                if (existing) existing.remove();
+                const toast = document.createElement('div');
+                toast.id = 'auth-toast';
+                toast.style.cssText = 'position:fixed;bottom:24px;right:24px;z-index:9999;padding:14px 24px;border-radius:12px;font-family:"Plus Jakarta Sans",sans-serif;font-size:14px;font-weight:600;color:#fff;box-shadow:0 8px 32px rgba(0,0,0,.15);transform:translateY(20px);opacity:0;transition:all .3s cubic-bezier(.34,1.56,.64,1);max-width:380px;';
+                toast.style.background = type === 'error' ? '#ea4335' : '#39B54A';
+                toast.innerHTML = '<i class="fa-solid ' + (type === 'error' ? 'fa-circle-exclamation' : 'fa-circle-check') + ' mr-2"></i>' + message;
+                document.body.appendChild(toast);
+                requestAnimationFrame(() => { toast.style.transform = 'translateY(0)'; toast.style.opacity = '1'; });
+                setTimeout(() => { toast.style.transform = 'translateY(20px)'; toast.style.opacity = '0'; setTimeout(() => toast.remove(), 300); }, 4000);
+            }
+
+            function initGIS() {
+                if (typeof google === 'undefined' || !google.accounts) { setTimeout(initGIS, 200); return; }
+                google.accounts.id.initialize({ client_id: GOOGLE_CLIENT_ID, callback: handleCredentialResponse, auto_select: false, ux_mode: 'popup' });
+                google.accounts.id.renderButton(document.getElementById('g-signin-hidden'), { type: 'standard', size: 'large', theme: 'outline' });
+                gisReady = true;
+            }
+
+            function checkSession() {
+                fetch('/api/auth/me').then(res => { if (res.ok) return res.json(); throw new Error('Not authenticated'); })
+                    .then(data => { if (data.authenticated) { isAuthenticated = true; currentUser = data.user; updateAuthUI(); } })
+                    .catch(() => { updateAuthUI(); });
+            }
+
+            window.addEventListener('DOMContentLoaded', () => { initGIS(); checkSession(); });
+        })();
+    </script>
+
+    <script>
+        function openEmbedModal() {
+            const modal = document.getElementById('embed-modal');
+            const card = document.getElementById('embed-modal-card');
+            modal.style.opacity = '1';
+            modal.style.pointerEvents = 'auto';
+            modal.style.backdropFilter = 'blur(6px)';
+            requestAnimationFrame(() => { card.style.transform = 'scale(1) translateY(0)'; card.style.opacity = '1'; });
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeEmbedModal() {
+            const modal = document.getElementById('embed-modal');
+            const card = document.getElementById('embed-modal-card');
+            modal.style.opacity = '0';
+            modal.style.backdropFilter = 'blur(0px)';
+            card.style.transform = 'scale(.88) translateY(24px)';
+            card.style.opacity = '0';
+            setTimeout(() => { modal.style.pointerEvents = 'none'; }, 320);
+            document.body.style.overflow = '';
+        }
+
+        function addEmbed() {
+            const type = document.getElementById('embed-type').value;
+            const title = document.getElementById('embed-title').value.trim();
+            const url = document.getElementById('embed-url').value.trim();
+            if (!url) return;
+            const container = document.getElementById('embed-container');
+            const wrapper = document.createElement('div');
+            wrapper.className = 'glass-card overflow-hidden relative group';
+
+            let inner = '';
+            if (type === 'image') {
+                inner = `<img src="${url}" alt="${title}" class="w-full h-48 object-cover">`;
+            } else if (type === 'video') {
+                const ytMatch = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\s]+)/);
+                if (ytMatch) {
+                    inner = `<div class="aspect-video"><iframe src="https://www.youtube.com/embed/${ytMatch[1]}" class="w-full h-full" frameborder="0" allowfullscreen></iframe></div>`;
+                } else {
+                    inner = `<video src="${url}" controls class="w-full h-48 object-cover"></video>`;
+                }
+            } else {
+                inner = `<div class="p-6 flex items-center gap-4"><i class="fa-solid fa-file-pdf text-3xl" style="color:#F7941D;"></i><a href="${url}" target="_blank" class="text-[#0066B3] font-semibold text-sm underline">${title || url}</a></div>`;
+            }
+
+            if (title && type !== 'file') inner += `<div class="p-4"><p class="font-semibold text-sm text-[#1d235c]">${title}</p></div>`;
+
+            const removeBtn = `<button class="embed-remove absolute top-2 right-2 w-7 h-7 rounded-full bg-white/90 shadow flex items-center justify-center text-[#ea4335] text-xs" style="border:none;cursor:pointer;" onclick="this.closest('.glass-card').remove()"><i class="fa-solid fa-xmark"></i></button>`;
+            wrapper.innerHTML = inner + removeBtn;
+            container.appendChild(wrapper);
+            closeEmbedModal();
+        }
+
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeEmbedModal(); });
+    </script>
+
+</body>
+</html>

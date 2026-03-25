@@ -28,7 +28,7 @@ body {
 }
 .bg-mesh, .blob { display: none; }
 
-.content-layer { position: relative; z-index: 1; }
+.content-layer { position: relative; }
 .top-bar {
     background: var(--bg);
     border-bottom: 1px solid var(--border);
@@ -40,9 +40,11 @@ body {
 #navbar {
     background: var(--bg);
     border-bottom: 1px solid transparent;
-    transition: border-color .25s, box-shadow .25s;
+    transition: border-color .25s, box-shadow .25s, top .25s;
+    z-index: 50;
 }
 #navbar.scrolled {
+    top: 0 !important;
     border-bottom-color: var(--border);
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
@@ -231,6 +233,7 @@ body {
     animation: draw-path 4s forwards cubic-bezier(.2,.8,.2,1);
 }
 @keyframes draw-path { to { stroke-dashoffset: 0; } }
+
 .gradient-text {
     background: linear-gradient(135deg, var(--orange) 0%, var(--yellow) 50%, var(--cyan) 100%);
     -webkit-background-clip: text;
@@ -308,4 +311,138 @@ body {
     border-color: var(--orange);
     box-shadow: 0 8px 30px rgba(247,148,29,.10);
     transform: translateY(-4px);
+}
+
+/* ═══ ACCREDITATION CARDS ═══ */
+.accred-card {
+    position: relative;
+    overflow: hidden;
+    transition: all .35s cubic-bezier(.25,.8,.25,1);
+}
+.accred-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--orange), var(--cyan));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .4s cubic-bezier(.25,.8,.25,1);
+}
+.accred-card:hover::before {
+    transform: scaleX(1);
+}
+.accred-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(27,58,122,.12);
+    border-color: var(--cyan);
+}
+.accred-icon {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    background: var(--bg-alt);
+    display: flex; align-items: center; justify-content: center;
+    transition: all .35s;
+}
+.accred-card:hover .accred-icon {
+    transform: scale(1.1) rotate(-5deg);
+    background: rgba(41,171,226,.08);
+}
+.accred-badge span {
+    transition: all .25s;
+}
+.accred-card:hover .accred-badge span {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+/* ═══ BLOG CARDS ═══ */
+.blog-card {
+    transition: all .3s cubic-bezier(.25,.8,.25,1);
+}
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 48px rgba(27,58,122,.12);
+    border-color: var(--blue);
+}
+.blog-card .relative::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,.3), transparent);
+    opacity: 0;
+    transition: opacity .3s;
+}
+.blog-card:hover .relative::after {
+    opacity: 1;
+}
+
+/* ═══ GALLERY ═══ */
+.gallery-item {
+    transition: all .35s cubic-bezier(.25,.8,.25,1);
+}
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 36px rgba(0,0,0,.15);
+    z-index: 5;
+}
+.gallery-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,.6) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* ═══ EMBED CARDS ═══ */
+.embed-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all .3s;
+}
+.embed-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+    border-color: var(--cyan);
+}
+.embed-card .embed-preview {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-alt);
+    overflow: hidden;
+}
+.embed-card .embed-preview img,
+.embed-card .embed-preview iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+}
+.embed-card .embed-info {
+    padding: 16px;
+}
+.embed-card .embed-remove {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity .2s;
+}
+.embed-card:hover .embed-remove[style*="display: flex"],
+.embed-card:hover .embed-remove[style*="display:flex"] {
+    opacity: 1;
 }
